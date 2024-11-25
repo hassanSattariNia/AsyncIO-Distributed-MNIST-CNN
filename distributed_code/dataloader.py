@@ -95,14 +95,14 @@ if __name__ == "__main__":
     # Initialize DataManager
     data_manager = DataManager(data_loader)
 
-# Set the maximum number of epochs
-max_epochs = 3
+    # Set the maximum number of epochs
+    max_epochs = 3
 
-# Loop over the dataset for the specified number of epochs
-while data_manager.epoch < max_epochs:
-    features, labels = data_manager.next_batch()
-    print(f"Features shape: {features.shape}, Labels shape: {labels.shape}")
-    print(f"Current Epoch: {data_manager.epoch} current batch[{data_manager.batch_count}]")
-    
-print("Finished processing dataset for 3 epochs.")
+    # Loop over the dataset for the specified number of epochs
+    while data_manager.epoch < max_epochs:
+        features, labels = data_manager.next_batch()
+        print(f"Features shape: {features.shape}, Labels shape: {labels.shape}")
+        print(f"Current Epoch: {data_manager.epoch} current batch[{data_manager.batch_count}]")
+        
+    print("Finished processing dataset for 3 epochs.")
 
