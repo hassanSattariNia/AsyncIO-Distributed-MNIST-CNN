@@ -5,6 +5,8 @@ from distributed_code.dataloader import DataLoader , DataManager
 import uuid
 import time
 
+from distributed_code.partitions import Partition1 , Partition2 , Partition3 , Partition4 , FinalPartition
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -15,37 +17,7 @@ logging.basicConfig(
     ]
 )
 
-# Partition Classes
-class Partition1:
-    async def process(self, data):
-        logging.info("Partition 1")
-        return 1
 
-class Partition2:
-    async def process(self, x):
-        logging.info("Partition 2")
-        return x + 2
-
-class Partition3:
-    async def process(self, x):
-        logging.info("Partition 3")
-        return x * 4
-
-class Partition4:
-    async def process(self, x):
-        logging.info("Partition 4")
-        return x - 1
-
-class FinalPartition:
-    async def process(self, x, label):
-        logging.info(f"Computed Value: {x}, Expected Label: {label}")
-        if x == label:
-            logging.info("Success!")
-        else:
-            logging.info("Failed!")
-
-# Labels
-labels = {1: 11, 2: 15, 3: 19, 4: 23}
 
 # Async Client Class
 class Client:
@@ -73,12 +45,13 @@ class Client:
                 stage = data["stage"]
                 epoch = data["epoch"]
                 batch_id = data["batch_id"]
-
+                client_id = data["client_id"]
+                
                 if stage == 1 :
-                    x = await self.partition1.process(x)
+                    output = await self.partition1.process(x)
                     stage +=1 
                     self.input_queue[stage].put({
-                        "output":x  ,
+                        "output":output  ,
                         "stage": stage,
                         "source": self.client_id,
                         "destination": stage,
@@ -88,24 +61,37 @@ class Client:
 
 
                 elif stage != 5:
-                    x = await self.partition.process(x)
+                    output = await self.partition.process(x)
                     # logging.info(f"Epoch [{current_epoch}]: x value in client[{client_id}] stage:[{stage}] = {x}")
-                    stage += 1
-                    self.input_queue[stage].put({
-                        "output": x,
-                        "stage": stage,
-                        "source": self.client_id,
-                        "destination": stage,
-                        "client_id": self.client_id,
-                        "batch_id":batch_id ,
-                        "epoch": epoch
-                    })
+
+                    if stage == 4:
+                        # if stage 4 => send data to client that is owner of data
+                        self.input_queue[client_id].put({
+                            "output": output,
+                            "stage": 5,
+                            "source": self.client_id,
+                            "destination": client_id,
+                            "client_id": client_id,
+                            "batch_id":batch_id ,
+                            "epoch": epoch
+                        })
+                    else:
+                        stage += 1
+                        self.input_queue[stage].put({
+                            "output": output,
+                            "stage": stage,
+                            "source": self.client_id,
+                            "destination": stage,
+                            "client_id": client_id,
+                            "batch_id":batch_id ,
+                            "epoch": epoch
+                        })
                 else:
                     logging.info("Final partition")
                     await self.final_partition.process(x, self.dataStore[batch_id])
             
             if self.dataManager.epoch < 1:
-                logging.info(f"reading at client {self.client_id}")
+                logging.info(f"reading batch[{self.dataManager.batch_count}] client {self.client_id}")
                 random_id = str(uuid.uuid4())
                 features, labels = self.dataManager.next_batch()
                 self.input_queue[self.client_id].put({
@@ -121,9 +107,9 @@ class Client:
                 self.dataStore[random_id] = labels            
 
             else:
-                logging.info(f'all data read and data Store for client{self.client_id} is:{self.dataStore}')
+                logging.info(f'all data read and data Store for client ')
             
-            await asyncio.sleep(2)
+            await asyncio.sleep(0)
 # Initialize Queues and Partitions
 queues = {i: Queue() for i in range(1, 6)}
 partition1 = Partition1()
