@@ -4,7 +4,7 @@ from queue import Queue
 from distributed_code.dataloader import DataLoader , DataManager
 import uuid
 import time
-
+import torch
 from distributed_code.partitions import Partition1 , Partition2 , Partition3 , Partition4 , FinalPartition
 
 # Configure logging
@@ -113,9 +113,9 @@ class Client:
                         logging.info("Final partition")
                         # idBackwardMessage = str(uuid.uuid4())
                         loss = await self.final_partition.process(x, self.dataStoreLabels[batch_id])
-                        self.input_queue[client_id].put({
+                        self.input_queue[4].put({
                             "output":loss ,
-                            "stage":5,
+                            "stage":4,
                             "source":client_id,
                             "batch_id":batch_id,
                             "client_id":client_id,
@@ -124,7 +124,17 @@ class Client:
                         })
                         
                 else:
-                    logging.critical("we have message type backward")        
+                    logging.critical("we have message type backward")
+                    if stage == 4:
+                        output_data = self.dataStore[batch_id]["4"]["output_data"]
+                        logging.critical(f"type of loss is :{type(x)}")
+                        if isinstance(x, torch.Tensor):
+                            grad_output = torch.autograd.grad(x, output_data, retain_graph=True)[0]
+                            logging.critical(f"Gradient computed successfully: {grad_output}")
+
+
+
+                                 
             if self.dataManager.epoch < 1:
                 logging.info(f"reading batch[{self.dataManager.batch_count}] client {self.client_id}")
                 random_id = str(uuid.uuid4())
