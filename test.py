@@ -52,6 +52,15 @@ class Client:
                     if stage == 1 :
                         output = await self.partition1.process(x)
                         stage +=1 
+
+                        # save for backward handling
+                        if batch_id not in self.dataStore:
+                            self.dataStore[batch_id] = {"1": {}}
+                        self.dataStore[batch_id]["1"]["input_data"] = x
+                        self.dataStore[batch_id]["1"]["output_data"] = output    
+                        
+
+
                         self.input_queue[stage].put({
                             "output":output  ,
                             "stage": stage,
@@ -67,6 +76,15 @@ class Client:
                         output = await self.partition.process(x)
                         # logging.info(f"Epoch [{current_epoch}]: x value in client[{client_id}] stage:[{stage}] = {x}")
 
+                           # save for backward handling
+                        if batch_id not in self.dataStore:
+                            self.dataStore[batch_id] = {f"{stage}": {}}  # اگر batch_id وجود ندارد، به همراه "1" آن را ایجاد می‌کنیم
+                        elif f"{stage}" not in self.dataStore[batch_id]:
+                            self.dataStore[batch_id][f"{stage}"] = {}  
+                        self.dataStore[batch_id][f"{stage}"]["input_data"] = x
+                        self.dataStore[batch_id][f"{stage}"]["output_data"] = output    
+                        
+                        
                         if stage == 4:
                             # if stage 4 => send data to client that is owner of data
                             self.input_queue[client_id].put({
@@ -121,13 +139,9 @@ class Client:
                     "epoch":self.dataManager.epoch,
                     "message_type":"forward"
                 })
+                self.dataStoreLabels[random_id]= labels
 
-                if batch_id not in self.dataStore:
-                    self.dataStore[batch_id] = {} 
-                
-                self.dataStore[batch_id]["1"]["input_data"] = features
-                self.dataStore[batch_id]["1"]["output_data"] = features    
-                self.dataStoreLabels[batch_id] = labels      
+                  
 
             else:
                 logging.info(f'all data read and data Store for client ')
