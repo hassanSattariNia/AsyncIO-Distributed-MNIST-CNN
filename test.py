@@ -46,50 +46,66 @@ class Client:
                 epoch = data["epoch"]
                 batch_id = data["batch_id"]
                 client_id = data["client_id"]
-                
-                if stage == 1 :
-                    output = await self.partition1.process(x)
-                    stage +=1 
-                    self.input_queue[stage].put({
-                        "output":output  ,
-                        "stage": stage,
-                        "source": self.client_id,
-                        "destination": stage,
-                        "client_id": self.client_id,
-                        "batch_id":batch_id ,
-                        "epoch": epoch })
-
-
-                elif stage != 5:
-                    output = await self.partition.process(x)
-                    # logging.info(f"Epoch [{current_epoch}]: x value in client[{client_id}] stage:[{stage}] = {x}")
-
-                    if stage == 4:
-                        # if stage 4 => send data to client that is owner of data
-                        self.input_queue[client_id].put({
-                            "output": output,
-                            "stage": 5,
-                            "source": self.client_id,
-                            "destination": client_id,
-                            "client_id": client_id,
-                            "batch_id":batch_id ,
-                            "epoch": epoch
-                        })
-                    else:
-                        stage += 1
+                message_type = data["message_type"]
+                if message_type == "forward":
+                    if stage == 1 :
+                        output = await self.partition1.process(x)
+                        stage +=1 
                         self.input_queue[stage].put({
-                            "output": output,
+                            "output":output  ,
                             "stage": stage,
                             "source": self.client_id,
                             "destination": stage,
-                            "client_id": client_id,
+                            "client_id": self.client_id,
                             "batch_id":batch_id ,
-                            "epoch": epoch
+                            "epoch": epoch,
+                            "message_type":"forward" })
+
+
+                    elif stage != 5:
+                        output = await self.partition.process(x)
+                        # logging.info(f"Epoch [{current_epoch}]: x value in client[{client_id}] stage:[{stage}] = {x}")
+
+                        if stage == 4:
+                            # if stage 4 => send data to client that is owner of data
+                            self.input_queue[client_id].put({
+                                "output": output,
+                                "stage": 5,
+                                "source": self.client_id,
+                                "destination": client_id,
+                                "client_id": client_id,
+                                "batch_id":batch_id ,
+                                "epoch": epoch,
+                                "message_type":"forward"
+                            })
+                        else:
+                            stage += 1
+                            self.input_queue[stage].put({
+                                "output": output,
+                                "stage": stage,
+                                "source": self.client_id,
+                                "destination": stage,
+                                "client_id": client_id,
+                                "batch_id":batch_id ,
+                                "epoch": epoch,
+                                "message_type":"forward"
+                            })
+                    else:
+                        logging.info("Final partition")
+                        # idBackwardMessage = str(uuid.uuid4())
+                        loss = await self.final_partition.process(x, self.dataStore[batch_id])
+                        self.input_queue[client_id].put({
+                            "output":loss ,
+                            "stage":5,
+                            "source":client_id,
+                            "batch_id":batch_id,
+                            "client_id":client_id,
+                            "epoch":epoch,
+                            "message_type":"backward"
                         })
+                        
                 else:
-                    logging.info("Final partition")
-                    await self.final_partition.process(x, self.dataStore[batch_id])
-            
+                    logging.critical("we have message type backward")        
             if self.dataManager.epoch < 1:
                 logging.info(f"reading batch[{self.dataManager.batch_count}] client {self.client_id}")
                 random_id = str(uuid.uuid4())
@@ -101,7 +117,8 @@ class Client:
                     "destination": self.client_id,
                     "client_id": self.client_id,
                     "batch_id":random_id ,
-                    "epoch":self.dataManager.epoch
+                    "epoch":self.dataManager.epoch,
+                    "message_type":"forward"
                 })
 
                 self.dataStore[random_id] = labels            

@@ -2,4 +2,4 @@
 /data 
 /distributed_code/__pycache__/
 /data
-.gitignore
+*.log
