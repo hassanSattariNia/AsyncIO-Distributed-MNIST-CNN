@@ -28,6 +28,7 @@ class Client:
         self.final_partition = final_partition
         self.input_queue = input_queue
         self.dataManager = self.dataLoaderMnist()
+        self.dataStoreLabels = {}
         self.dataStore = {}
 
     def dataLoaderMnist(self):
@@ -93,7 +94,7 @@ class Client:
                     else:
                         logging.info("Final partition")
                         # idBackwardMessage = str(uuid.uuid4())
-                        loss = await self.final_partition.process(x, self.dataStore[batch_id])
+                        loss = await self.final_partition.process(x, self.dataStoreLabels[batch_id])
                         self.input_queue[client_id].put({
                             "output":loss ,
                             "stage":5,
@@ -121,7 +122,12 @@ class Client:
                     "message_type":"forward"
                 })
 
-                self.dataStore[random_id] = labels            
+                if batch_id not in self.dataStore:
+                    self.dataStore[batch_id] = {} 
+                
+                self.dataStore[batch_id]["1"]["input_data"] = features
+                self.dataStore[batch_id]["1"]["output_data"] = features    
+                self.dataStoreLabels[batch_id] = labels      
 
             else:
                 logging.info(f'all data read and data Store for client ')

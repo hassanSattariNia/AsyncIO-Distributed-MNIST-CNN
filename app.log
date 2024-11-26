@@ -1,864 +1,168 @@
-2024-11-26 11:26:47,942 - INFO - reading batch[0] client 1
-2024-11-26 11:26:47,964 - INFO - reading batch[0] client 2
-2024-11-26 11:26:47,992 - INFO - reading batch[0] client 3
-2024-11-26 11:26:48,020 - INFO - reading batch[0] client 4
-2024-11-26 11:26:48,042 - INFO - Partition 1 processing
-2024-11-26 11:26:48,057 - INFO - reading batch[1] client 1
-2024-11-26 11:26:48,077 - INFO - Partition 1 processing
-2024-11-26 11:26:48,091 - INFO - reading batch[1] client 2
-2024-11-26 11:26:48,112 - INFO - Partition 1 processing
-2024-11-26 11:26:48,126 - INFO - reading batch[1] client 3
-2024-11-26 11:26:48,143 - INFO - Partition 1 processing
-2024-11-26 11:26:48,156 - INFO - reading batch[1] client 4
-2024-11-26 11:26:48,176 - INFO - Partition 1 processing
-2024-11-26 11:26:48,190 - INFO - reading batch[2] client 1
-2024-11-26 11:26:48,208 - INFO - Partition 2 processing
-2024-11-26 11:26:48,215 - INFO - reading batch[2] client 2
-2024-11-26 11:26:48,231 - INFO - Partition 1 processing
-2024-11-26 11:26:48,246 - INFO - reading batch[2] client 3
-2024-11-26 11:26:48,271 - INFO - Partition 1 processing
-2024-11-26 11:26:48,282 - INFO - reading batch[2] client 4
-2024-11-26 11:26:48,305 - INFO - Partition 1 processing
-2024-11-26 11:26:48,316 - INFO - reading batch[3] client 1
-2024-11-26 11:26:48,337 - INFO - Partition 2 processing
-2024-11-26 11:26:48,343 - INFO - reading batch[3] client 2
-2024-11-26 11:26:48,361 - INFO - Partition 3 processing
-2024-11-26 11:26:48,363 - INFO - reading batch[3] client 3
-2024-11-26 11:26:48,379 - INFO - Partition 1 processing
-2024-11-26 11:26:48,399 - INFO - reading batch[3] client 4
-2024-11-26 11:26:48,417 - INFO - Partition 1 processing
-2024-11-26 11:26:48,431 - INFO - reading batch[4] client 1
-2024-11-26 11:26:48,452 - INFO - Partition 1 processing
-2024-11-26 11:26:48,464 - INFO - reading batch[4] client 2
-2024-11-26 11:26:48,486 - INFO - Partition 1 processing
-2024-11-26 11:26:48,497 - INFO - reading batch[4] client 3
-2024-11-26 11:26:48,513 - INFO - Partition 4 processing
-2024-11-26 11:26:48,514 - INFO - reading batch[4] client 4
-2024-11-26 11:26:48,536 - INFO - Partition 1 processing
-2024-11-26 11:26:48,547 - INFO - reading batch[5] client 1
-2024-11-26 11:26:48,569 - INFO - Partition 2 processing
-2024-11-26 11:26:48,575 - INFO - reading batch[5] client 2
-2024-11-26 11:26:48,591 - INFO - Partition 3 processing
-2024-11-26 11:26:48,593 - INFO - reading batch[5] client 3
-2024-11-26 11:26:48,612 - INFO - Partition 1 processing
-2024-11-26 11:26:48,626 - INFO - reading batch[5] client 4
-2024-11-26 11:26:48,642 - INFO - Final partition
-2024-11-26 11:26:48,642 - INFO - Final partition processing
-2024-11-26 11:26:48,643 - INFO - Loss: 2.3002054691314697
-2024-11-26 11:26:48,644 - INFO - reading batch[6] client 1
-2024-11-26 11:26:48,665 - INFO - Partition 2 processing
-2024-11-26 11:26:48,676 - INFO - reading batch[6] client 2
-2024-11-26 11:26:48,692 - INFO - Partition 1 processing
-2024-11-26 11:26:48,705 - INFO - reading batch[6] client 3
-2024-11-26 11:26:48,724 - INFO - Partition 1 processing
-2024-11-26 11:26:48,736 - INFO - reading batch[6] client 4
-2024-11-26 11:26:48,756 - INFO - Partition 1 processing
-2024-11-26 11:26:48,770 - INFO - reading batch[7] client 1
-2024-11-26 11:26:48,786 - INFO - Partition 2 processing
-2024-11-26 11:26:48,792 - INFO - reading batch[7] client 2
-2024-11-26 11:26:48,814 - INFO - Partition 1 processing
-2024-11-26 11:26:48,827 - INFO - reading batch[7] client 3
-2024-11-26 11:26:48,843 - INFO - Partition 4 processing
-2024-11-26 11:26:48,844 - INFO - reading batch[7] client 4
-2024-11-26 11:26:48,860 - INFO - reading batch[8] client 1
-2024-11-26 11:26:48,877 - INFO - Partition 1 processing
-2024-11-26 11:26:48,888 - INFO - reading batch[8] client 2
-2024-11-26 11:26:48,907 - INFO - Partition 3 processing
-2024-11-26 11:26:48,909 - INFO - reading batch[8] client 3
-2024-11-26 11:26:48,927 - INFO - Partition 1 processing
-2024-11-26 11:26:48,940 - INFO - reading batch[8] client 4
-2024-11-26 11:26:48,959 - INFO - Partition 1 processing
-2024-11-26 11:26:48,975 - INFO - reading batch[9] client 1
-2024-11-26 11:26:48,997 - INFO - Partition 2 processing
-2024-11-26 11:26:49,005 - INFO - reading batch[9] client 2
-2024-11-26 11:26:49,023 - INFO - Partition 1 processing
-2024-11-26 11:26:49,038 - INFO - reading batch[9] client 3
-2024-11-26 11:26:49,057 - INFO - Partition 1 processing
-2024-11-26 11:26:49,070 - INFO - reading batch[9] client 4
-2024-11-26 11:26:49,088 - INFO - Partition 1 processing
-2024-11-26 11:26:49,100 - INFO - reading batch[10] client 1
-2024-11-26 11:26:49,121 - INFO - Partition 2 processing
-2024-11-26 11:26:49,127 - INFO - reading batch[10] client 2
-2024-11-26 11:26:49,145 - INFO - Partition 3 processing
-2024-11-26 11:26:49,146 - INFO - reading batch[10] client 3
-2024-11-26 11:26:49,165 - INFO - Partition 1 processing
-2024-11-26 11:26:49,176 - INFO - reading batch[10] client 4
-2024-11-26 11:26:49,196 - INFO - Partition 1 processing
-2024-11-26 11:26:49,213 - INFO - reading batch[11] client 1
-2024-11-26 11:26:49,233 - INFO - Partition 2 processing
-2024-11-26 11:26:49,242 - INFO - reading batch[11] client 2
-2024-11-26 11:26:49,259 - INFO - Partition 1 processing
-2024-11-26 11:26:49,270 - INFO - reading batch[11] client 3
-2024-11-26 11:26:49,289 - INFO - Partition 4 processing
-2024-11-26 11:26:49,290 - INFO - reading batch[11] client 4
-2024-11-26 11:26:49,309 - INFO - Partition 1 processing
-2024-11-26 11:26:49,321 - INFO - reading batch[12] client 1
-2024-11-26 11:26:49,340 - INFO - Partition 1 processing
-2024-11-26 11:26:49,354 - INFO - reading batch[12] client 2
-2024-11-26 11:26:49,372 - INFO - Partition 3 processing
-2024-11-26 11:26:49,374 - INFO - reading batch[12] client 3
-2024-11-26 11:26:49,394 - INFO - Partition 1 processing
-2024-11-26 11:26:49,409 - INFO - reading batch[12] client 4
-2024-11-26 11:26:49,426 - INFO - Partition 1 processing
-2024-11-26 11:26:49,442 - INFO - reading batch[13] client 1
-2024-11-26 11:26:49,460 - INFO - Partition 2 processing
-2024-11-26 11:26:49,470 - INFO - reading batch[13] client 2
-2024-11-26 11:26:49,488 - INFO - Partition 1 processing
-2024-11-26 11:26:49,500 - INFO - reading batch[13] client 3
-2024-11-26 11:26:49,516 - INFO - Partition 1 processing
-2024-11-26 11:26:49,526 - INFO - reading batch[13] client 4
-2024-11-26 11:26:49,544 - INFO - Partition 1 processing
-2024-11-26 11:26:49,556 - INFO - reading batch[14] client 1
-2024-11-26 11:26:49,578 - INFO - Partition 2 processing
-2024-11-26 11:26:49,586 - INFO - reading batch[14] client 2
-2024-11-26 11:26:49,608 - INFO - Partition 1 processing
-2024-11-26 11:26:49,623 - INFO - reading batch[14] client 3
-2024-11-26 11:26:49,644 - INFO - Partition 4 processing
-2024-11-26 11:26:49,645 - INFO - reading batch[14] client 4
-2024-11-26 11:26:49,666 - INFO - Partition 1 processing
-2024-11-26 11:26:49,676 - INFO - reading batch[15] client 1
-2024-11-26 11:26:49,696 - INFO - Partition 2 processing
-2024-11-26 11:26:49,704 - INFO - reading batch[15] client 2
-2024-11-26 11:26:49,722 - INFO - Partition 3 processing
-2024-11-26 11:26:49,723 - INFO - reading batch[15] client 3
-2024-11-26 11:26:49,741 - INFO - Partition 1 processing
-2024-11-26 11:26:49,755 - INFO - reading batch[15] client 4
-2024-11-26 11:26:49,774 - INFO - Partition 1 processing
-2024-11-26 11:26:49,787 - INFO - reading batch[16] client 1
-2024-11-26 11:26:49,807 - INFO - Partition 1 processing
-2024-11-26 11:26:49,818 - INFO - reading batch[16] client 2
-2024-11-26 11:26:49,838 - INFO - Partition 1 processing
-2024-11-26 11:26:49,851 - INFO - reading batch[16] client 3
-2024-11-26 11:26:49,870 - INFO - Partition 1 processing
-2024-11-26 11:26:49,883 - INFO - reading batch[16] client 4
-2024-11-26 11:26:49,940 - INFO - Partition 1 processing
-2024-11-26 11:26:49,990 - INFO - reading batch[17] client 1
-2024-11-26 11:26:50,009 - INFO - Partition 2 processing
-2024-11-26 11:26:50,018 - INFO - reading batch[17] client 2
-2024-11-26 11:26:50,038 - INFO - Partition 3 processing
-2024-11-26 11:26:50,040 - INFO - reading batch[17] client 3
-2024-11-26 11:26:50,059 - INFO - Partition 4 processing
-2024-11-26 11:26:50,060 - INFO - reading batch[17] client 4
-2024-11-26 11:26:50,077 - INFO - Partition 1 processing
-2024-11-26 11:26:50,088 - INFO - reading batch[18] client 1
-2024-11-26 11:26:50,107 - INFO - Partition 2 processing
-2024-11-26 11:26:50,114 - INFO - reading batch[18] client 2
-2024-11-26 11:26:50,131 - INFO - Partition 1 processing
-2024-11-26 11:26:50,145 - INFO - reading batch[18] client 3
-2024-11-26 11:26:50,168 - INFO - Partition 1 processing
-2024-11-26 11:26:50,181 - INFO - reading batch[18] client 4
-2024-11-26 11:26:50,196 - INFO - Partition 1 processing
-2024-11-26 11:26:50,209 - INFO - reading batch[19] client 1
-2024-11-26 11:26:50,225 - INFO - Partition 1 processing
-2024-11-26 11:26:50,238 - INFO - reading batch[19] client 2
-2024-11-26 11:26:50,259 - INFO - Partition 3 processing
-2024-11-26 11:26:50,261 - INFO - reading batch[19] client 3
-2024-11-26 11:26:50,278 - INFO - Partition 1 processing
-2024-11-26 11:26:50,290 - INFO - reading batch[19] client 4
-2024-11-26 11:26:50,307 - INFO - Partition 1 processing
-2024-11-26 11:26:50,321 - INFO - reading batch[20] client 1
-2024-11-26 11:26:50,340 - INFO - Partition 2 processing
-2024-11-26 11:26:50,351 - INFO - reading batch[20] client 2
-2024-11-26 11:26:50,365 - INFO - Partition 1 processing
-2024-11-26 11:26:50,380 - INFO - reading batch[20] client 3
-2024-11-26 11:26:50,402 - INFO - Final partition
-2024-11-26 11:26:50,403 - INFO - Final partition processing
-2024-11-26 11:26:50,403 - INFO - Loss: 2.3035356998443604
-2024-11-26 11:26:50,404 - INFO - reading batch[20] client 4
-2024-11-26 11:26:50,424 - INFO - Final partition
-2024-11-26 11:26:50,425 - INFO - Final partition processing
-2024-11-26 11:26:50,425 - INFO - Loss: 2.3009564876556396
-2024-11-26 11:26:50,426 - INFO - reading batch[21] client 1
-2024-11-26 11:26:50,444 - INFO - Partition 1 processing
-2024-11-26 11:26:50,454 - INFO - reading batch[21] client 2
-2024-11-26 11:26:50,471 - INFO - Final partition
-2024-11-26 11:26:50,471 - INFO - Final partition processing
-2024-11-26 11:26:50,472 - INFO - Loss: 2.3030216693878174
-2024-11-26 11:26:50,472 - INFO - reading batch[21] client 3
-2024-11-26 11:26:50,491 - INFO - Partition 1 processing
-2024-11-26 11:26:50,502 - INFO - reading batch[21] client 4
-2024-11-26 11:26:50,521 - INFO - Partition 1 processing
-2024-11-26 11:26:50,535 - INFO - reading batch[22] client 1
-2024-11-26 11:26:50,555 - INFO - Partition 2 processing
-2024-11-26 11:26:50,560 - INFO - reading batch[22] client 2
-2024-11-26 11:26:50,581 - INFO - Partition 1 processing
-2024-11-26 11:26:50,593 - INFO - reading batch[22] client 3
-2024-11-26 11:26:50,609 - INFO - Partition 4 processing
-2024-11-26 11:26:50,610 - INFO - reading batch[22] client 4
-2024-11-26 11:26:50,628 - INFO - Partition 1 processing
-2024-11-26 11:26:50,640 - INFO - reading batch[23] client 1
-2024-11-26 11:26:50,658 - INFO - Partition 2 processing
-2024-11-26 11:26:50,667 - INFO - reading batch[23] client 2
-2024-11-26 11:26:50,683 - INFO - Partition 3 processing
-2024-11-26 11:26:50,684 - INFO - reading batch[23] client 3
-2024-11-26 11:26:50,702 - INFO - Partition 1 processing
-2024-11-26 11:26:50,715 - INFO - reading batch[23] client 4
-2024-11-26 11:26:50,736 - INFO - Partition 1 processing
-2024-11-26 11:26:50,750 - INFO - reading batch[24] client 1
-2024-11-26 11:26:50,770 - INFO - Partition 2 processing
-2024-11-26 11:26:50,776 - INFO - reading batch[24] client 2
-2024-11-26 11:26:50,800 - INFO - Partition 1 processing
-2024-11-26 11:26:50,813 - INFO - reading batch[24] client 3
-2024-11-26 11:26:50,835 - INFO - Partition 1 processing
-2024-11-26 11:26:50,848 - INFO - reading batch[24] client 4
-2024-11-26 11:26:50,869 - INFO - reading batch[25] client 1
-2024-11-26 11:26:50,887 - INFO - Partition 1 processing
-2024-11-26 11:26:50,898 - INFO - reading batch[25] client 2
-2024-11-26 11:26:50,918 - INFO - Partition 3 processing
-2024-11-26 11:26:50,920 - INFO - reading batch[25] client 3
-2024-11-26 11:26:50,938 - INFO - Partition 4 processing
-2024-11-26 11:26:50,939 - INFO - reading batch[25] client 4
-2024-11-26 11:26:50,956 - INFO - Partition 1 processing
-2024-11-26 11:26:50,971 - INFO - reading batch[26] client 1
-2024-11-26 11:26:50,992 - INFO - Partition 2 processing
-2024-11-26 11:26:51,000 - INFO - reading batch[26] client 2
-2024-11-26 11:26:51,023 - INFO - Partition 1 processing
-2024-11-26 11:26:51,035 - INFO - reading batch[26] client 3
-2024-11-26 11:26:51,053 - INFO - Partition 1 processing
-2024-11-26 11:26:51,063 - INFO - reading batch[26] client 4
-2024-11-26 11:26:51,079 - INFO - Partition 1 processing
-2024-11-26 11:26:51,095 - INFO - reading batch[27] client 1
-2024-11-26 11:26:51,112 - INFO - Final partition
-2024-11-26 11:26:51,113 - INFO - Final partition processing
-2024-11-26 11:26:51,114 - INFO - Loss: 2.312317132949829
-2024-11-26 11:26:51,115 - INFO - reading batch[27] client 2
-2024-11-26 11:26:51,130 - INFO - Partition 3 processing
-2024-11-26 11:26:51,132 - INFO - reading batch[27] client 3
-2024-11-26 11:26:51,152 - INFO - Partition 1 processing
-2024-11-26 11:26:51,165 - INFO - reading batch[27] client 4
-2024-11-26 11:26:51,188 - INFO - Partition 1 processing
-2024-11-26 11:26:51,199 - INFO - reading batch[28] client 1
-2024-11-26 11:26:51,220 - INFO - Partition 2 processing
-2024-11-26 11:26:51,227 - INFO - reading batch[28] client 2
-2024-11-26 11:26:51,250 - INFO - Partition 1 processing
-2024-11-26 11:26:51,262 - INFO - reading batch[28] client 3
-2024-11-26 11:26:51,283 - INFO - Partition 4 processing
-2024-11-26 11:26:51,283 - INFO - reading batch[28] client 4
-2024-11-26 11:26:51,302 - INFO - Partition 1 processing
-2024-11-26 11:26:51,314 - INFO - reading batch[29] client 1
-2024-11-26 11:26:51,329 - INFO - Partition 1 processing
-2024-11-26 11:26:51,344 - INFO - reading batch[29] client 2
-2024-11-26 11:26:51,360 - INFO - Partition 1 processing
-2024-11-26 11:26:51,373 - INFO - reading batch[29] client 3
-2024-11-26 11:26:51,394 - INFO - Partition 1 processing
-2024-11-26 11:26:51,407 - INFO - reading batch[29] client 4
-2024-11-26 11:26:51,426 - INFO - Partition 1 processing
-2024-11-26 11:26:51,439 - INFO - reading batch[30] client 1
-2024-11-26 11:26:51,456 - INFO - Partition 2 processing
-2024-11-26 11:26:51,462 - INFO - reading batch[30] client 2
-2024-11-26 11:26:51,479 - INFO - Partition 3 processing
-2024-11-26 11:26:51,482 - INFO - reading batch[30] client 3
-2024-11-26 11:26:51,503 - INFO - reading batch[30] client 4
-2024-11-26 11:26:51,524 - INFO - Partition 1 processing
-2024-11-26 11:26:51,535 - INFO - reading batch[31] client 1
-2024-11-26 11:26:51,555 - INFO - Partition 2 processing
-2024-11-26 11:26:51,565 - INFO - reading batch[31] client 2
-2024-11-26 11:26:51,580 - INFO - Partition 1 processing
-2024-11-26 11:26:51,595 - INFO - reading batch[31] client 3
-2024-11-26 11:26:51,614 - INFO - Partition 1 processing
-2024-11-26 11:26:51,630 - INFO - reading batch[31] client 4
-2024-11-26 11:26:51,650 - INFO - Partition 1 processing
-2024-11-26 11:26:51,661 - INFO - reading batch[32] client 1
-2024-11-26 11:26:51,679 - INFO - Partition 1 processing
-2024-11-26 11:26:51,691 - INFO - reading batch[32] client 2
-2024-11-26 11:26:51,708 - INFO - Partition 3 processing
-2024-11-26 11:26:51,710 - INFO - reading batch[32] client 3
-2024-11-26 11:26:51,731 - INFO - Partition 1 processing
-2024-11-26 11:26:51,741 - INFO - reading batch[32] client 4
-2024-11-26 11:26:51,766 - INFO - Partition 1 processing
-2024-11-26 11:26:51,777 - INFO - reading batch[33] client 1
-2024-11-26 11:26:51,797 - INFO - Partition 2 processing
-2024-11-26 11:26:51,805 - INFO - reading batch[33] client 2
-2024-11-26 11:26:51,824 - INFO - Partition 1 processing
-2024-11-26 11:26:51,838 - INFO - reading batch[33] client 3
-2024-11-26 11:26:51,857 - INFO - Partition 1 processing
-2024-11-26 11:26:51,868 - INFO - reading batch[33] client 4
-2024-11-26 11:26:51,887 - INFO - Final partition
-2024-11-26 11:26:51,888 - INFO - Final partition processing
-2024-11-26 11:26:51,888 - INFO - Loss: 2.325028657913208
-2024-11-26 11:26:51,889 - INFO - reading batch[34] client 1
-2024-11-26 11:26:51,908 - INFO - Partition 2 processing
-2024-11-26 11:26:51,915 - INFO - reading batch[34] client 2
-2024-11-26 11:26:51,935 - INFO - Partition 1 processing
-2024-11-26 11:26:51,945 - INFO - reading batch[34] client 3
-2024-11-26 11:26:51,973 - INFO - Partition 4 processing
-2024-11-26 11:26:51,973 - INFO - reading batch[34] client 4
-2024-11-26 11:26:51,996 - INFO - Partition 1 processing
-2024-11-26 11:26:52,008 - INFO - reading batch[35] client 1
-2024-11-26 11:26:52,032 - INFO - Partition 2 processing
-2024-11-26 11:26:52,039 - INFO - reading batch[35] client 2
-2024-11-26 11:26:52,057 - INFO - Partition 3 processing
-2024-11-26 11:26:52,059 - INFO - reading batch[35] client 3
-2024-11-26 11:26:52,077 - INFO - Partition 1 processing
-2024-11-26 11:26:52,089 - INFO - reading batch[35] client 4
-2024-11-26 11:26:52,106 - INFO - Partition 1 processing
-2024-11-26 11:26:52,119 - INFO - reading batch[36] client 1
-2024-11-26 11:26:52,139 - INFO - Partition 1 processing
-2024-11-26 11:26:52,152 - INFO - reading batch[36] client 2
-2024-11-26 11:26:52,174 - INFO - Partition 1 processing
-2024-11-26 11:26:52,188 - INFO - reading batch[36] client 3
-2024-11-26 11:26:52,208 - INFO - Partition 1 processing
-2024-11-26 11:26:52,220 - INFO - reading batch[36] client 4
-2024-11-26 11:26:52,243 - INFO - Partition 1 processing
-2024-11-26 11:26:52,258 - INFO - reading batch[37] client 1
-2024-11-26 11:26:52,275 - INFO - Partition 2 processing
-2024-11-26 11:26:52,283 - INFO - reading batch[37] client 2
-2024-11-26 11:26:52,303 - INFO - reading batch[37] client 3
-2024-11-26 11:26:52,322 - INFO - Partition 4 processing
-2024-11-26 11:26:52,322 - INFO - reading batch[37] client 4
-2024-11-26 11:26:52,344 - INFO - Partition 1 processing
-2024-11-26 11:26:52,357 - INFO - reading batch[38] client 1
-2024-11-26 11:26:52,377 - INFO - Partition 2 processing
-2024-11-26 11:26:52,387 - INFO - reading batch[38] client 2
-2024-11-26 11:26:52,411 - INFO - Partition 1 processing
-2024-11-26 11:26:52,424 - INFO - reading batch[38] client 3
-2024-11-26 11:27:58,697 - INFO - reading batch[0] client 1
-2024-11-26 11:27:58,725 - INFO - reading batch[0] client 2
-2024-11-26 11:27:58,751 - INFO - reading batch[0] client 3
-2024-11-26 11:27:58,780 - INFO - reading batch[0] client 4
-2024-11-26 11:27:58,801 - INFO - Partition 1 processing
-2024-11-26 11:27:58,815 - INFO - reading batch[1] client 1
-2024-11-26 11:27:58,834 - INFO - Partition 1 processing
-2024-11-26 11:27:58,845 - INFO - reading batch[1] client 2
-2024-11-26 11:27:58,864 - INFO - Partition 1 processing
-2024-11-26 11:27:58,878 - INFO - reading batch[1] client 3
-2024-11-26 11:27:58,901 - INFO - Partition 1 processing
-2024-11-26 11:27:58,914 - INFO - reading batch[1] client 4
-2024-11-26 11:27:58,932 - INFO - Partition 1 processing
-2024-11-26 11:27:58,944 - INFO - reading batch[2] client 1
-2024-11-26 11:27:58,963 - INFO - Partition 2 processing
-2024-11-26 11:27:58,972 - INFO - reading batch[2] client 2
-2024-11-26 11:27:58,991 - INFO - Partition 1 processing
-2024-11-26 11:27:59,002 - INFO - reading batch[2] client 3
-2024-11-26 11:27:59,016 - INFO - Partition 1 processing
-2024-11-26 11:27:59,027 - INFO - reading batch[2] client 4
-2024-11-26 11:27:59,044 - INFO - Partition 1 processing
-2024-11-26 11:27:59,059 - INFO - reading batch[3] client 1
-2024-11-26 11:27:59,078 - INFO - Partition 2 processing
-2024-11-26 11:27:59,088 - INFO - reading batch[3] client 2
-2024-11-26 11:27:59,107 - INFO - Partition 3 processing
-2024-11-26 11:27:59,109 - INFO - reading batch[3] client 3
-2024-11-26 11:27:59,130 - INFO - Partition 1 processing
-2024-11-26 11:27:59,142 - INFO - reading batch[3] client 4
-2024-11-26 11:27:59,162 - INFO - Partition 1 processing
-2024-11-26 11:27:59,174 - INFO - reading batch[4] client 1
-2024-11-26 11:27:59,195 - INFO - Partition 1 processing
-2024-11-26 11:27:59,208 - INFO - reading batch[4] client 2
-2024-11-26 11:27:59,226 - INFO - Partition 1 processing
-2024-11-26 11:27:59,242 - INFO - reading batch[4] client 3
-2024-11-26 11:27:59,262 - INFO - Partition 4 processing
-2024-11-26 11:27:59,263 - INFO - reading batch[4] client 4
-2024-11-26 11:27:59,280 - INFO - Partition 1 processing
-2024-11-26 11:27:59,294 - INFO - reading batch[5] client 1
-2024-11-26 11:27:59,311 - INFO - Partition 2 processing
-2024-11-26 11:27:59,320 - INFO - reading batch[5] client 2
-2024-11-26 11:27:59,338 - INFO - Partition 3 processing
-2024-11-26 11:27:59,340 - INFO - reading batch[5] client 3
-2024-11-26 11:27:59,363 - INFO - Partition 1 processing
-2024-11-26 11:27:59,375 - INFO - reading batch[5] client 4
-2024-11-26 11:27:59,394 - INFO - Final partition
-2024-11-26 11:27:59,394 - INFO - Final partition processing
-2024-11-26 11:27:59,395 - INFO - Loss: 2.322967767715454
-2024-11-26 11:27:59,395 - INFO - reading batch[6] client 1
-2024-11-26 11:27:59,415 - INFO - Partition 2 processing
-2024-11-26 11:27:59,426 - INFO - reading batch[6] client 2
-2024-11-26 11:27:59,445 - INFO - Partition 1 processing
-2024-11-26 11:27:59,458 - INFO - reading batch[6] client 3
-2024-11-26 11:27:59,476 - INFO - Partition 1 processing
-2024-11-26 11:27:59,488 - INFO - reading batch[6] client 4
-2024-11-26 11:27:59,506 - INFO - Partition 1 processing
-2024-11-26 11:27:59,519 - INFO - reading batch[7] client 1
-2024-11-26 11:27:59,539 - INFO - Partition 2 processing
-2024-11-26 11:27:59,545 - INFO - reading batch[7] client 2
-2024-11-26 11:27:59,562 - INFO - Partition 1 processing
-2024-11-26 11:27:59,577 - INFO - reading batch[7] client 3
-2024-11-26 11:27:59,595 - INFO - Partition 4 processing
-2024-11-26 11:27:59,595 - INFO - reading batch[7] client 4
-2024-11-26 11:27:59,611 - CRITICAL - we have message type backward
-2024-11-26 11:27:59,612 - INFO - reading batch[8] client 1
-2024-11-26 11:27:59,628 - INFO - Partition 1 processing
-2024-11-26 11:27:59,640 - INFO - reading batch[8] client 2
-2024-11-26 11:27:59,660 - INFO - Partition 3 processing
-2024-11-26 11:27:59,661 - INFO - reading batch[8] client 3
-2024-11-26 11:27:59,678 - INFO - Partition 1 processing
-2024-11-26 11:27:59,692 - INFO - reading batch[8] client 4
-2024-11-26 11:27:59,711 - INFO - Partition 1 processing
-2024-11-26 11:27:59,722 - INFO - reading batch[9] client 1
-2024-11-26 11:27:59,737 - INFO - Partition 2 processing
-2024-11-26 11:27:59,747 - INFO - reading batch[9] client 2
-2024-11-26 11:27:59,770 - INFO - Partition 1 processing
-2024-11-26 11:27:59,784 - INFO - reading batch[9] client 3
-2024-11-26 11:27:59,800 - INFO - Partition 1 processing
-2024-11-26 11:27:59,813 - INFO - reading batch[9] client 4
-2024-11-26 11:27:59,834 - INFO - Partition 1 processing
-2024-11-26 11:27:59,844 - INFO - reading batch[10] client 1
-2024-11-26 11:27:59,862 - INFO - Partition 2 processing
-2024-11-26 11:27:59,870 - INFO - reading batch[10] client 2
-2024-11-26 11:27:59,891 - INFO - Partition 3 processing
-2024-11-26 11:27:59,893 - INFO - reading batch[10] client 3
-2024-11-26 11:27:59,911 - INFO - Partition 1 processing
-2024-11-26 11:27:59,924 - INFO - reading batch[10] client 4
-2024-11-26 11:27:59,945 - INFO - Partition 1 processing
-2024-11-26 11:27:59,958 - INFO - reading batch[11] client 1
-2024-11-26 11:27:59,978 - INFO - Partition 2 processing
-2024-11-26 11:27:59,988 - INFO - reading batch[11] client 2
-2024-11-26 11:28:00,006 - INFO - Partition 1 processing
-2024-11-26 11:28:00,025 - INFO - reading batch[11] client 3
-2024-11-26 11:28:00,046 - INFO - Partition 4 processing
-2024-11-26 11:28:00,047 - INFO - reading batch[11] client 4
-2024-11-26 11:28:00,064 - INFO - Partition 1 processing
-2024-11-26 11:28:00,080 - INFO - reading batch[12] client 1
-2024-11-26 11:28:00,100 - INFO - Partition 1 processing
-2024-11-26 11:28:00,112 - INFO - reading batch[12] client 2
-2024-11-26 11:28:00,137 - INFO - Partition 3 processing
-2024-11-26 11:28:00,138 - INFO - reading batch[12] client 3
-2024-11-26 11:28:00,157 - INFO - Partition 1 processing
-2024-11-26 11:28:00,170 - INFO - reading batch[12] client 4
-2024-11-26 11:28:00,189 - INFO - Partition 1 processing
-2024-11-26 11:28:00,203 - INFO - reading batch[13] client 1
-2024-11-26 11:28:00,221 - INFO - Partition 2 processing
-2024-11-26 11:28:00,228 - INFO - reading batch[13] client 2
-2024-11-26 11:28:00,247 - INFO - Partition 1 processing
-2024-11-26 11:28:00,258 - INFO - reading batch[13] client 3
-2024-11-26 11:28:00,277 - INFO - Partition 1 processing
-2024-11-26 11:28:00,292 - INFO - reading batch[13] client 4
-2024-11-26 11:28:00,311 - INFO - Partition 1 processing
-2024-11-26 11:28:00,325 - INFO - reading batch[14] client 1
-2024-11-26 11:28:00,342 - INFO - Partition 2 processing
-2024-11-26 11:28:00,352 - INFO - reading batch[14] client 2
-2024-11-26 11:28:00,371 - INFO - Partition 1 processing
-2024-11-26 11:28:00,384 - INFO - reading batch[14] client 3
-2024-11-26 11:28:00,405 - INFO - Partition 4 processing
-2024-11-26 11:28:00,405 - INFO - reading batch[14] client 4
-2024-11-26 11:28:00,425 - INFO - Partition 1 processing
-2024-11-26 11:28:00,438 - INFO - reading batch[15] client 1
-2024-11-26 11:28:00,456 - INFO - Partition 2 processing
-2024-11-26 11:28:00,462 - INFO - reading batch[15] client 2
-2024-11-26 11:28:00,485 - INFO - Partition 3 processing
-2024-11-26 11:28:00,486 - INFO - reading batch[15] client 3
-2024-11-26 11:28:00,505 - INFO - Partition 1 processing
-2024-11-26 11:28:00,521 - INFO - reading batch[15] client 4
-2024-11-26 11:28:00,540 - INFO - Partition 1 processing
-2024-11-26 11:28:00,553 - INFO - reading batch[16] client 1
-2024-11-26 11:28:00,573 - INFO - Partition 1 processing
-2024-11-26 11:28:00,584 - INFO - reading batch[16] client 2
-2024-11-26 11:28:00,600 - INFO - Partition 1 processing
-2024-11-26 11:28:00,612 - INFO - reading batch[16] client 3
-2024-11-26 11:28:00,631 - INFO - Partition 1 processing
-2024-11-26 11:28:00,643 - INFO - reading batch[16] client 4
-2024-11-26 11:28:00,663 - INFO - Partition 1 processing
-2024-11-26 11:28:00,675 - INFO - reading batch[17] client 1
-2024-11-26 11:28:00,693 - INFO - Partition 2 processing
-2024-11-26 11:28:00,701 - INFO - reading batch[17] client 2
-2024-11-26 11:28:00,723 - INFO - Partition 3 processing
-2024-11-26 11:28:00,724 - INFO - reading batch[17] client 3
-2024-11-26 11:28:00,748 - INFO - Partition 4 processing
-2024-11-26 11:28:00,749 - INFO - reading batch[17] client 4
-2024-11-26 11:28:00,770 - INFO - Partition 1 processing
-2024-11-26 11:28:00,784 - INFO - reading batch[18] client 1
-2024-11-26 11:28:00,806 - INFO - Partition 2 processing
-2024-11-26 11:28:00,812 - INFO - reading batch[18] client 2
-2024-11-26 11:28:00,830 - INFO - Partition 1 processing
-2024-11-26 11:28:00,841 - INFO - reading batch[18] client 3
-2024-11-26 11:28:00,861 - INFO - Partition 1 processing
-2024-11-26 11:28:00,875 - INFO - reading batch[18] client 4
-2024-11-26 11:28:00,893 - INFO - Partition 1 processing
-2024-11-26 11:28:00,906 - INFO - reading batch[19] client 1
-2024-11-26 11:28:00,927 - INFO - Partition 1 processing
-2024-11-26 11:28:00,939 - INFO - reading batch[19] client 2
-2024-11-26 11:28:00,958 - INFO - Partition 3 processing
-2024-11-26 11:28:00,959 - INFO - reading batch[19] client 3
-2024-11-26 11:28:00,978 - INFO - Partition 1 processing
-2024-11-26 11:28:00,992 - INFO - reading batch[19] client 4
-2024-11-26 11:28:01,012 - INFO - Partition 1 processing
-2024-11-26 11:28:01,028 - INFO - reading batch[20] client 1
-2024-11-26 11:28:01,059 - INFO - Partition 2 processing
-2024-11-26 11:28:01,071 - INFO - reading batch[20] client 2
-2024-11-26 11:28:01,095 - INFO - Partition 1 processing
-2024-11-26 11:28:01,109 - INFO - reading batch[20] client 3
-2024-11-26 11:28:01,135 - INFO - Final partition
-2024-11-26 11:28:01,135 - INFO - Final partition processing
-2024-11-26 11:28:01,136 - INFO - Loss: 2.301933765411377
-2024-11-26 11:28:01,137 - INFO - reading batch[20] client 4
-2024-11-26 11:28:01,167 - INFO - Final partition
-2024-11-26 11:28:01,167 - INFO - Final partition processing
-2024-11-26 11:28:01,168 - INFO - Loss: 2.3128445148468018
-2024-11-26 11:28:01,169 - INFO - reading batch[21] client 1
-2024-11-26 11:28:01,191 - INFO - Partition 1 processing
-2024-11-26 11:28:01,204 - INFO - reading batch[21] client 2
-2024-11-26 11:28:01,224 - INFO - Final partition
-2024-11-26 11:28:01,224 - INFO - Final partition processing
-2024-11-26 11:28:01,225 - INFO - Loss: 2.3214237689971924
-2024-11-26 11:28:01,225 - INFO - reading batch[21] client 3
-2024-11-26 11:28:01,245 - INFO - Partition 1 processing
-2024-11-26 11:28:01,259 - INFO - reading batch[21] client 4
-2024-11-26 11:28:01,281 - INFO - Partition 1 processing
-2024-11-26 11:28:01,294 - INFO - reading batch[22] client 1
-2024-11-26 11:28:01,318 - INFO - Partition 2 processing
-2024-11-26 11:28:01,324 - INFO - reading batch[22] client 2
-2024-11-26 11:28:01,344 - INFO - Partition 1 processing
-2024-11-26 11:28:01,359 - INFO - reading batch[22] client 3
-2024-11-26 11:28:01,380 - INFO - Partition 4 processing
-2024-11-26 11:28:01,380 - INFO - reading batch[22] client 4
-2024-11-26 11:28:01,403 - INFO - Partition 1 processing
-2024-11-26 11:28:01,418 - INFO - reading batch[23] client 1
-2024-11-26 11:28:01,439 - INFO - Partition 2 processing
-2024-11-26 11:28:01,451 - INFO - reading batch[23] client 2
-2024-11-26 11:28:01,467 - INFO - Partition 3 processing
-2024-11-26 11:28:01,469 - INFO - reading batch[23] client 3
-2024-11-26 11:28:01,490 - INFO - Partition 1 processing
-2024-11-26 11:28:01,508 - INFO - reading batch[23] client 4
-2024-11-26 11:28:01,530 - INFO - Partition 1 processing
-2024-11-26 11:28:01,544 - INFO - reading batch[24] client 1
-2024-11-26 11:28:01,563 - INFO - Partition 2 processing
-2024-11-26 11:28:01,572 - INFO - reading batch[24] client 2
-2024-11-26 11:28:01,589 - INFO - Partition 1 processing
-2024-11-26 11:28:01,602 - INFO - reading batch[24] client 3
-2024-11-26 11:28:01,621 - INFO - Partition 1 processing
-2024-11-26 11:28:01,707 - INFO - reading batch[24] client 4
-2024-11-26 11:28:01,738 - CRITICAL - we have message type backward
-2024-11-26 11:28:01,738 - INFO - reading batch[25] client 1
-2024-11-26 11:28:01,767 - INFO - Partition 1 processing
-2024-11-26 11:28:01,784 - INFO - reading batch[25] client 2
-2024-11-26 11:28:01,802 - INFO - Partition 3 processing
-2024-11-26 11:28:01,803 - INFO - reading batch[25] client 3
-2024-11-26 11:28:01,838 - INFO - Partition 4 processing
-2024-11-26 11:28:01,840 - INFO - reading batch[25] client 4
-2024-11-26 11:28:01,883 - INFO - Partition 1 processing
-2024-11-26 11:28:01,902 - INFO - reading batch[26] client 1
-2024-11-26 11:28:01,936 - INFO - Partition 2 processing
-2024-11-26 11:28:01,946 - INFO - reading batch[26] client 2
-2024-11-26 11:28:01,989 - INFO - Partition 1 processing
-2024-11-26 11:28:02,002 - INFO - reading batch[26] client 3
-2024-11-26 11:28:02,022 - INFO - Partition 1 processing
-2024-11-26 11:28:02,037 - INFO - reading batch[26] client 4
-2024-11-26 11:28:02,062 - INFO - Partition 1 processing
-2024-11-26 11:28:02,075 - INFO - reading batch[27] client 1
-2024-11-26 11:28:02,094 - INFO - Final partition
-2024-11-26 11:28:02,095 - INFO - Final partition processing
-2024-11-26 11:28:02,095 - INFO - Loss: 2.318284273147583
-2024-11-26 11:28:02,095 - INFO - reading batch[27] client 2
-2024-11-26 11:28:02,128 - INFO - Partition 3 processing
-2024-11-26 11:28:02,133 - INFO - reading batch[27] client 3
-2024-11-26 11:28:02,159 - INFO - Partition 1 processing
-2024-11-26 11:28:02,176 - INFO - reading batch[27] client 4
-2024-11-26 11:28:02,195 - INFO - Partition 1 processing
-2024-11-26 11:28:02,210 - INFO - reading batch[28] client 1
-2024-11-26 11:28:02,237 - INFO - Partition 2 processing
-2024-11-26 11:28:02,242 - INFO - reading batch[28] client 2
-2024-11-26 11:28:02,269 - INFO - Partition 1 processing
-2024-11-26 11:28:02,284 - INFO - reading batch[28] client 3
-2024-11-26 11:28:02,312 - INFO - Partition 4 processing
-2024-11-26 11:28:02,312 - INFO - reading batch[28] client 4
-2024-11-26 11:28:02,345 - INFO - Partition 1 processing
-2024-11-26 11:28:02,417 - INFO - reading batch[29] client 1
-2024-11-26 11:28:02,439 - INFO - Partition 1 processing
-2024-11-26 11:28:02,452 - INFO - reading batch[29] client 2
-2024-11-26 11:28:02,473 - INFO - Partition 1 processing
-2024-11-26 11:28:02,494 - INFO - reading batch[29] client 3
-2024-11-26 11:28:02,559 - INFO - Partition 1 processing
-2024-11-26 11:28:02,594 - INFO - reading batch[29] client 4
-2024-11-26 11:28:02,650 - INFO - Partition 1 processing
-2024-11-26 11:28:02,672 - INFO - reading batch[30] client 1
-2024-11-26 11:28:02,706 - INFO - Partition 2 processing
-2024-11-26 11:28:02,717 - INFO - reading batch[30] client 2
-2024-11-26 11:28:02,739 - INFO - Partition 3 processing
-2024-11-26 11:28:02,741 - INFO - reading batch[30] client 3
-2024-11-26 11:28:02,760 - CRITICAL - we have message type backward
-2024-11-26 11:28:02,760 - INFO - reading batch[30] client 4
-2024-11-26 11:28:02,782 - INFO - Partition 1 processing
-2024-11-26 11:28:02,794 - INFO - reading batch[31] client 1
-2024-11-26 11:28:02,824 - INFO - Partition 2 processing
-2024-11-26 11:28:02,830 - INFO - reading batch[31] client 2
-2024-11-26 11:28:02,853 - INFO - Partition 1 processing
-2024-11-26 11:28:02,867 - INFO - reading batch[31] client 3
-2024-11-26 11:28:02,889 - INFO - Partition 1 processing
-2024-11-26 11:28:02,902 - INFO - reading batch[31] client 4
-2024-11-26 11:28:02,924 - INFO - Partition 1 processing
-2024-11-26 11:28:02,936 - INFO - reading batch[32] client 1
-2024-11-26 11:28:02,959 - INFO - Partition 1 processing
-2024-11-26 11:28:02,974 - INFO - reading batch[32] client 2
-2024-11-26 11:28:02,995 - INFO - Partition 3 processing
-2024-11-26 11:28:02,998 - INFO - reading batch[32] client 3
-2024-11-26 11:28:03,020 - INFO - Partition 1 processing
-2024-11-26 11:28:03,032 - INFO - reading batch[32] client 4
-2024-11-26 11:28:03,047 - INFO - Partition 1 processing
-2024-11-26 11:28:03,057 - INFO - reading batch[33] client 1
-2024-11-26 11:28:03,076 - INFO - Partition 2 processing
-2024-11-26 11:28:03,086 - INFO - reading batch[33] client 2
-2024-11-26 11:28:03,111 - INFO - Partition 1 processing
-2024-11-26 11:28:03,128 - INFO - reading batch[33] client 3
-2024-11-26 11:28:03,152 - INFO - Partition 1 processing
-2024-11-26 11:28:03,163 - INFO - reading batch[33] client 4
-2024-11-26 11:28:03,186 - INFO - Final partition
-2024-11-26 11:28:03,186 - INFO - Final partition processing
-2024-11-26 11:28:03,186 - INFO - Loss: 2.3050107955932617
-2024-11-26 11:28:03,187 - INFO - reading batch[34] client 1
-2024-11-26 11:28:03,205 - INFO - Partition 2 processing
-2024-11-26 11:28:03,211 - INFO - reading batch[34] client 2
-2024-11-26 11:28:03,237 - INFO - Partition 1 processing
-2024-11-26 11:28:03,253 - INFO - reading batch[34] client 3
-2024-11-26 11:28:03,273 - INFO - Partition 4 processing
-2024-11-26 11:28:03,273 - INFO - reading batch[34] client 4
-2024-11-26 11:28:03,294 - INFO - Partition 1 processing
-2024-11-26 11:28:03,305 - INFO - reading batch[35] client 1
-2024-11-26 11:28:03,326 - INFO - Partition 2 processing
-2024-11-26 11:28:03,334 - INFO - reading batch[35] client 2
-2024-11-26 11:28:03,353 - INFO - Partition 3 processing
-2024-11-26 11:28:03,355 - INFO - reading batch[35] client 3
-2024-11-26 11:28:03,377 - INFO - Partition 1 processing
-2024-11-26 11:28:03,396 - INFO - reading batch[35] client 4
-2024-11-26 11:28:03,425 - INFO - Partition 1 processing
-2024-11-26 11:28:03,437 - INFO - reading batch[36] client 1
-2024-11-26 11:28:03,456 - INFO - Partition 1 processing
-2024-11-26 11:28:03,469 - INFO - reading batch[36] client 2
-2024-11-26 11:28:03,490 - INFO - Partition 1 processing
-2024-11-26 11:28:03,506 - INFO - reading batch[36] client 3
-2024-11-26 11:28:03,527 - INFO - Partition 1 processing
-2024-11-26 11:28:03,539 - INFO - reading batch[36] client 4
-2024-11-26 11:28:03,570 - INFO - Partition 1 processing
-2024-11-26 11:28:03,583 - INFO - reading batch[37] client 1
-2024-11-26 11:28:03,606 - INFO - Partition 2 processing
-2024-11-26 11:28:03,613 - INFO - reading batch[37] client 2
-2024-11-26 11:28:03,632 - CRITICAL - we have message type backward
-2024-11-26 11:28:03,632 - INFO - reading batch[37] client 3
-2024-11-26 11:28:03,655 - INFO - Partition 4 processing
-2024-11-26 11:28:03,656 - INFO - reading batch[37] client 4
-2024-11-26 11:28:03,676 - INFO - Partition 1 processing
-2024-11-26 11:28:03,693 - INFO - reading batch[38] client 1
-2024-11-26 11:28:03,718 - INFO - Partition 2 processing
-2024-11-26 11:28:03,727 - INFO - reading batch[38] client 2
-2024-11-26 11:28:03,751 - INFO - Partition 1 processing
-2024-11-26 11:28:03,761 - INFO - reading batch[38] client 3
-2024-11-26 11:28:03,784 - INFO - Final partition
-2024-11-26 11:28:03,784 - INFO - Final partition processing
-2024-11-26 11:28:03,785 - INFO - Loss: 2.297184467315674
-2024-11-26 11:28:03,785 - INFO - reading batch[38] client 4
-2024-11-26 11:28:03,807 - INFO - Partition 1 processing
-2024-11-26 11:28:03,819 - INFO - reading batch[39] client 1
-2024-11-26 11:28:03,838 - INFO - Partition 1 processing
-2024-11-26 11:28:03,854 - INFO - reading batch[39] client 2
-2024-11-26 11:28:03,884 - INFO - Partition 3 processing
-2024-11-26 11:28:03,886 - INFO - reading batch[39] client 3
-2024-11-26 11:28:03,906 - INFO - Partition 1 processing
-2024-11-26 11:28:03,917 - INFO - reading batch[39] client 4
-2024-11-26 11:28:03,938 - CRITICAL - we have message type backward
-2024-11-26 11:28:03,938 - INFO - reading batch[40] client 1
-2024-11-26 11:28:03,959 - INFO - Partition 2 processing
-2024-11-26 11:28:03,969 - INFO - reading batch[40] client 2
-2024-11-26 11:28:03,990 - INFO - Partition 1 processing
-2024-11-26 11:28:04,006 - INFO - reading batch[40] client 3
-2024-11-26 11:28:04,026 - INFO - Partition 1 processing
-2024-11-26 11:28:04,040 - INFO - reading batch[40] client 4
-2024-11-26 11:28:04,058 - INFO - Partition 1 processing
-2024-11-26 11:28:04,071 - INFO - reading batch[41] client 1
-2024-11-26 11:28:04,102 - INFO - Partition 2 processing
-2024-11-26 11:28:04,107 - INFO - reading batch[41] client 2
-2024-11-26 11:28:04,129 - INFO - Final partition
-2024-11-26 11:28:04,129 - INFO - Final partition processing
-2024-11-26 11:28:04,130 - INFO - Loss: 2.297133684158325
-2024-11-26 11:28:04,130 - INFO - reading batch[41] client 3
-2024-11-26 11:28:04,150 - INFO - Partition 4 processing
-2024-11-26 11:28:04,151 - INFO - reading batch[41] client 4
-2024-11-26 11:28:04,176 - INFO - Partition 1 processing
-2024-11-26 11:28:04,188 - INFO - reading batch[42] client 1
-2024-11-26 11:28:04,207 - INFO - Partition 2 processing
-2024-11-26 11:28:04,214 - INFO - reading batch[42] client 2
-2024-11-26 11:28:04,236 - INFO - Partition 3 processing
-2024-11-26 11:28:04,238 - INFO - reading batch[42] client 3
-2024-11-26 11:28:04,257 - INFO - Partition 1 processing
-2024-11-26 11:28:04,270 - INFO - reading batch[42] client 4
-2024-11-26 11:28:04,289 - INFO - Partition 1 processing
-2024-11-26 11:28:04,306 - INFO - reading batch[43] client 1
-2024-11-26 11:28:04,332 - INFO - Partition 1 processing
-2024-11-26 11:28:04,351 - INFO - reading batch[43] client 2
-2024-11-26 11:28:04,378 - INFO - Partition 1 processing
-2024-11-26 11:28:04,393 - INFO - reading batch[43] client 3
-2024-11-26 11:28:04,416 - INFO - Partition 1 processing
-2024-11-26 11:28:04,427 - INFO - reading batch[43] client 4
-2024-11-26 11:28:04,451 - INFO - Partition 1 processing
-2024-11-26 11:28:04,467 - INFO - reading batch[44] client 1
-2024-11-26 11:28:04,540 - INFO - Partition 2 processing
-2024-11-26 11:28:04,588 - INFO - reading batch[44] client 2
-2024-11-26 11:28:04,609 - INFO - Partition 3 processing
-2024-11-26 11:28:04,611 - INFO - reading batch[44] client 3
-2024-11-26 11:28:04,635 - INFO - Partition 1 processing
-2024-11-26 11:28:04,648 - INFO - reading batch[44] client 4
-2024-11-26 11:28:04,676 - INFO - Final partition
-2024-11-26 11:28:04,676 - INFO - Final partition processing
-2024-11-26 11:28:04,677 - INFO - Loss: 2.314645767211914
-2024-11-26 11:28:04,677 - INFO - reading batch[45] client 1
-2024-11-26 11:28:04,701 - INFO - Partition 2 processing
-2024-11-26 11:28:04,707 - INFO - reading batch[45] client 2
-2024-11-26 11:28:04,725 - INFO - Partition 1 processing
-2024-11-26 11:28:04,737 - INFO - reading batch[45] client 3
-2024-11-26 11:28:04,755 - INFO - Partition 4 processing
-2024-11-26 11:28:04,756 - INFO - reading batch[45] client 4
-2024-11-26 11:28:04,773 - INFO - Partition 1 processing
-2024-11-26 11:28:04,787 - INFO - reading batch[46] client 1
-2024-11-26 11:28:04,821 - INFO - Partition 1 processing
-2024-11-26 11:28:04,836 - INFO - reading batch[46] client 2
-2024-11-26 11:28:04,853 - INFO - Partition 1 processing
-2024-11-26 11:28:04,866 - INFO - reading batch[46] client 3
-2024-11-26 11:28:04,888 - INFO - Partition 1 processing
-2024-11-26 11:28:04,902 - INFO - reading batch[46] client 4
-2024-11-26 11:28:04,922 - INFO - Partition 1 processing
-2024-11-26 11:28:04,939 - INFO - reading batch[47] client 1
-2024-11-26 11:28:04,965 - INFO - Partition 2 processing
-2024-11-26 11:28:04,973 - INFO - reading batch[47] client 2
-2024-11-26 11:28:04,998 - INFO - Partition 3 processing
-2024-11-26 11:28:05,000 - INFO - reading batch[47] client 3
-2024-11-26 11:28:05,018 - INFO - Partition 1 processing
-2024-11-26 11:28:05,034 - INFO - reading batch[47] client 4
-2024-11-26 11:28:05,060 - INFO - Partition 1 processing
-2024-11-26 11:28:05,075 - INFO - reading batch[48] client 1
-2024-11-26 11:28:05,109 - INFO - Partition 2 processing
-2024-11-26 11:28:05,119 - INFO - reading batch[48] client 2
-2024-11-26 11:28:05,141 - INFO - Partition 1 processing
-2024-11-26 11:28:05,153 - INFO - reading batch[48] client 3
-2024-11-26 11:28:05,171 - INFO - Partition 4 processing
-2024-11-26 11:28:05,172 - INFO - reading batch[48] client 4
-2024-11-26 11:28:05,188 - INFO - Partition 1 processing
-2024-11-26 11:28:05,202 - INFO - reading batch[49] client 1
-2024-11-26 11:28:05,220 - INFO - Partition 2 processing
-2024-11-26 11:28:05,233 - INFO - reading batch[49] client 2
-2024-11-26 11:28:05,254 - INFO - Partition 1 processing
-2024-11-26 11:28:05,267 - INFO - reading batch[49] client 3
-2024-11-26 11:28:05,286 - INFO - Partition 1 processing
-2024-11-26 11:28:05,302 - INFO - reading batch[49] client 4
-2024-11-26 11:28:05,321 - INFO - Partition 1 processing
-2024-11-26 11:28:05,336 - INFO - reading batch[50] client 1
-2024-11-26 11:28:05,353 - INFO - Partition 1 processing
-2024-11-26 11:28:05,366 - INFO - reading batch[50] client 2
-2024-11-26 11:28:05,386 - INFO - Partition 3 processing
-2024-11-26 11:28:05,389 - INFO - reading batch[50] client 3
-2024-11-26 11:28:05,413 - INFO - Partition 1 processing
-2024-11-26 11:28:05,432 - INFO - reading batch[50] client 4
-2024-11-26 11:28:05,451 - INFO - Partition 1 processing
-2024-11-26 11:28:05,466 - INFO - reading batch[51] client 1
-2024-11-26 11:28:05,484 - INFO - Partition 2 processing
-2024-11-26 11:28:05,490 - INFO - reading batch[51] client 2
-2024-11-26 11:28:05,513 - INFO - Partition 1 processing
-2024-11-26 11:28:05,529 - INFO - reading batch[51] client 3
-2024-11-26 11:28:05,549 - INFO - Final partition
-2024-11-26 11:28:05,551 - INFO - Final partition processing
-2024-11-26 11:28:05,560 - INFO - Loss: 2.313533067703247
-2024-11-26 11:28:05,563 - INFO - reading batch[51] client 4
-2024-11-26 11:28:05,591 - INFO - Partition 1 processing
-2024-11-26 11:28:05,604 - INFO - reading batch[52] client 1
-2024-11-26 11:28:05,623 - INFO - Partition 2 processing
-2024-11-26 11:28:05,630 - INFO - reading batch[52] client 2
-2024-11-26 11:28:05,646 - INFO - Partition 1 processing
-2024-11-26 11:28:05,658 - INFO - reading batch[52] client 3
-2024-11-26 11:28:05,675 - INFO - Partition 1 processing
-2024-11-26 11:28:05,689 - INFO - reading batch[52] client 4
-2024-11-26 11:28:05,709 - CRITICAL - we have message type backward
-2024-11-26 11:28:05,710 - INFO - reading batch[53] client 1
-2024-11-26 11:28:05,738 - INFO - Partition 1 processing
-2024-11-26 11:28:05,820 - INFO - reading batch[53] client 2
-2024-11-26 11:28:05,857 - INFO - Partition 3 processing
-2024-11-26 11:28:05,858 - INFO - reading batch[53] client 3
-2024-11-26 11:28:05,880 - INFO - Partition 4 processing
-2024-11-26 11:28:05,881 - INFO - reading batch[53] client 4
-2024-11-26 11:28:05,910 - INFO - Partition 1 processing
-2024-11-26 11:28:05,925 - INFO - reading batch[54] client 1
-2024-11-26 11:28:05,953 - INFO - Partition 2 processing
-2024-11-26 11:28:05,964 - INFO - reading batch[54] client 2
-2024-11-26 11:28:05,983 - INFO - Partition 1 processing
-2024-11-26 11:28:05,993 - INFO - reading batch[54] client 3
-2024-11-26 11:28:06,015 - INFO - Partition 1 processing
-2024-11-26 11:28:06,030 - INFO - reading batch[54] client 4
-2024-11-26 11:28:06,050 - INFO - Partition 1 processing
-2024-11-26 11:28:06,068 - INFO - reading batch[55] client 1
-2024-11-26 11:28:06,099 - INFO - Partition 2 processing
-2024-11-26 11:28:06,105 - INFO - reading batch[55] client 2
-2024-11-26 11:28:06,132 - INFO - Partition 3 processing
-2024-11-26 11:28:06,133 - INFO - reading batch[55] client 3
-2024-11-26 11:28:06,156 - INFO - Partition 1 processing
-2024-11-26 11:28:06,169 - INFO - reading batch[55] client 4
-2024-11-26 11:28:06,186 - INFO - Partition 1 processing
-2024-11-26 11:28:06,200 - INFO - reading batch[56] client 1
-2024-11-26 11:28:06,221 - INFO - Partition 2 processing
-2024-11-26 11:28:06,232 - INFO - reading batch[56] client 2
-2024-11-26 11:28:06,259 - INFO - Partition 1 processing
-2024-11-26 11:28:06,273 - INFO - reading batch[56] client 3
-2024-11-26 11:28:06,294 - INFO - Partition 1 processing
-2024-11-26 11:28:06,306 - INFO - reading batch[56] client 4
-2024-11-26 11:28:06,328 - INFO - Partition 1 processing
-2024-11-26 11:28:06,340 - INFO - reading batch[57] client 1
-2024-11-26 11:28:06,366 - INFO - Partition 1 processing
-2024-11-26 11:28:06,385 - INFO - reading batch[57] client 2
-2024-11-26 11:28:06,484 - INFO - Partition 1 processing
-2024-11-26 11:28:06,591 - INFO - reading batch[57] client 3
-2024-11-26 11:28:06,614 - CRITICAL - we have message type backward
-2024-11-26 11:28:06,614 - INFO - reading batch[57] client 4
-2024-11-26 11:28:06,634 - INFO - Final partition
-2024-11-26 11:28:06,635 - INFO - Final partition processing
-2024-11-26 11:28:06,635 - INFO - Loss: 2.322726249694824
-2024-11-26 11:28:06,636 - INFO - reading batch[58] client 1
-2024-11-26 11:28:06,670 - INFO - Partition 2 processing
-2024-11-26 11:28:06,681 - INFO - reading batch[58] client 2
-2024-11-26 11:28:06,704 - INFO - Partition 3 processing
-2024-11-26 11:28:06,706 - INFO - reading batch[58] client 3
-2024-11-26 11:28:06,724 - INFO - Partition 1 processing
-2024-11-26 11:28:06,734 - INFO - reading batch[58] client 4
-2024-11-26 11:28:06,753 - INFO - Partition 1 processing
-2024-11-26 11:28:06,766 - INFO - reading batch[59] client 1
-2024-11-26 11:28:06,789 - INFO - Partition 2 processing
-2024-11-26 11:28:06,797 - INFO - reading batch[59] client 2
-2024-11-26 11:28:06,815 - INFO - Partition 1 processing
-2024-11-26 11:28:06,830 - INFO - reading batch[59] client 3
-2024-11-26 11:28:06,855 - INFO - Partition 4 processing
-2024-11-26 11:28:06,856 - INFO - reading batch[59] client 4
-2024-11-26 11:28:06,885 - INFO - Partition 1 processing
-2024-11-26 11:28:06,899 - INFO - reading batch[60] client 1
-2024-11-26 11:28:06,922 - INFO - Partition 2 processing
-2024-11-26 11:28:06,931 - INFO - reading batch[60] client 2
-2024-11-26 11:28:06,950 - INFO - Partition 3 processing
-2024-11-26 11:28:06,952 - INFO - reading batch[60] client 3
-2024-11-26 11:28:06,972 - INFO - Partition 1 processing
-2024-11-26 11:28:06,989 - INFO - reading batch[60] client 4
-2024-11-26 11:28:07,023 - INFO - Partition 1 processing
-2024-11-26 11:28:07,038 - INFO - reading batch[61] client 1
-2024-11-26 11:28:07,057 - INFO - Partition 1 processing
-2024-11-26 11:28:07,071 - INFO - reading batch[61] client 2
-2024-11-26 11:28:07,093 - INFO - Partition 1 processing
-2024-11-26 11:28:07,104 - INFO - reading batch[61] client 3
-2024-11-26 11:28:07,124 - INFO - Partition 1 processing
-2024-11-26 11:28:07,140 - INFO - reading batch[61] client 4
-2024-11-26 11:28:07,167 - INFO - Partition 1 processing
-2024-11-26 11:28:07,181 - INFO - reading batch[62] client 1
-2024-11-26 11:28:07,203 - INFO - Partition 2 processing
-2024-11-26 11:28:07,213 - INFO - reading batch[62] client 2
-2024-11-26 11:28:07,232 - INFO - Partition 3 processing
-2024-11-26 11:28:07,234 - INFO - reading batch[62] client 3
-2024-11-26 11:28:07,253 - INFO - Partition 1 processing
-2024-11-26 11:28:07,269 - INFO - reading batch[62] client 4
-2024-11-26 11:28:07,304 - INFO - Partition 1 processing
-2024-11-26 11:28:07,320 - INFO - reading batch[63] client 1
-2024-11-26 11:28:07,338 - INFO - Partition 1 processing
-2024-11-26 11:28:07,352 - INFO - reading batch[63] client 2
-2024-11-26 11:28:07,373 - INFO - Partition 1 processing
-2024-11-26 11:28:07,386 - INFO - reading batch[63] client 3
-2024-11-26 11:28:07,406 - INFO - Partition 4 processing
-2024-11-26 11:28:07,408 - INFO - reading batch[63] client 4
-2024-11-26 11:28:07,431 - INFO - Partition 1 processing
-2024-11-26 11:28:07,448 - INFO - reading batch[64] client 1
-2024-11-26 11:28:07,468 - INFO - Partition 2 processing
-2024-11-26 11:28:07,474 - INFO - reading batch[64] client 2
-2024-11-26 11:28:07,496 - INFO - Partition 1 processing
-2024-11-26 11:28:07,513 - INFO - reading batch[64] client 3
-2024-11-26 11:28:07,536 - INFO - Partition 1 processing
-2024-11-26 11:28:07,549 - INFO - reading batch[64] client 4
-2024-11-26 11:28:07,572 - INFO - Partition 1 processing
-2024-11-26 11:28:07,589 - INFO - reading batch[65] client 1
-2024-11-26 11:28:07,611 - INFO - Partition 2 processing
-2024-11-26 11:28:07,622 - INFO - reading batch[65] client 2
-2024-11-26 11:28:07,646 - INFO - Partition 3 processing
-2024-11-26 11:28:07,648 - INFO - reading batch[65] client 3
-2024-11-26 11:28:07,665 - INFO - Partition 1 processing
-2024-11-26 11:28:07,679 - INFO - reading batch[65] client 4
-2024-11-26 11:28:07,697 - INFO - Partition 1 processing
-2024-11-26 11:28:07,710 - INFO - reading batch[66] client 1
-2024-11-26 11:28:07,727 - INFO - Partition 2 processing
-2024-11-26 11:28:07,740 - INFO - reading batch[66] client 2
+2024-11-26 16:57:35,877 - INFO - reading batch[0] client 1
+2024-11-26 16:57:35,948 - INFO - reading batch[0] client 2
+2024-11-26 16:57:35,975 - INFO - reading batch[0] client 3
+2024-11-26 16:57:36,009 - INFO - reading batch[0] client 4
+2024-11-26 16:57:36,036 - INFO - Partition 1 processing
+2024-11-26 16:57:36,107 - INFO - reading batch[1] client 1
+2024-11-26 16:57:36,124 - INFO - Partition 1 processing
+2024-11-26 16:57:36,140 - INFO - reading batch[1] client 2
+2024-11-26 16:57:36,159 - INFO - Partition 1 processing
+2024-11-26 16:57:36,171 - INFO - reading batch[1] client 3
+2024-11-26 16:57:36,196 - INFO - Partition 1 processing
+2024-11-26 16:57:36,213 - INFO - reading batch[1] client 4
+2024-11-26 16:57:36,234 - INFO - Partition 1 processing
+2024-11-26 16:57:36,250 - INFO - reading batch[2] client 1
+2024-11-26 16:57:36,274 - INFO - Partition 2 processing
+2024-11-26 16:57:36,287 - INFO - reading batch[2] client 2
+2024-11-26 16:57:36,312 - INFO - Partition 1 processing
+2024-11-26 16:57:36,329 - INFO - reading batch[2] client 3
+2024-11-26 16:57:36,348 - INFO - Partition 1 processing
+2024-11-26 16:57:36,362 - INFO - reading batch[2] client 4
+2024-11-26 16:57:36,384 - INFO - Partition 1 processing
+2024-11-26 16:57:36,397 - INFO - reading batch[3] client 1
+2024-11-26 16:57:36,428 - INFO - Partition 2 processing
+2024-11-26 16:57:36,439 - INFO - reading batch[3] client 2
+2024-11-26 16:57:36,471 - INFO - Partition 3 processing
+2024-11-26 16:57:36,492 - INFO - reading batch[3] client 3
+2024-11-26 16:57:36,528 - INFO - Partition 1 processing
+2024-11-26 16:57:36,561 - INFO - reading batch[3] client 4
+2024-11-26 16:57:36,617 - INFO - Partition 1 processing
+2024-11-26 16:57:36,634 - INFO - reading batch[4] client 1
+2024-11-26 16:57:36,678 - INFO - Partition 1 processing
+2024-11-26 16:57:36,709 - INFO - reading batch[4] client 2
+2024-11-26 16:57:36,758 - INFO - Partition 1 processing
+2024-11-26 16:57:36,776 - INFO - reading batch[4] client 3
+2024-11-26 16:57:36,794 - INFO - Partition 4 processing
+2024-11-26 16:57:36,797 - INFO - reading batch[4] client 4
+2024-11-26 16:57:36,819 - INFO - Partition 1 processing
+2024-11-26 16:57:36,839 - INFO - reading batch[5] client 1
+2024-11-26 16:57:36,861 - INFO - Partition 2 processing
+2024-11-26 16:57:36,870 - INFO - reading batch[5] client 2
+2024-11-26 16:57:36,892 - INFO - Partition 3 processing
+2024-11-26 16:57:36,894 - INFO - reading batch[5] client 3
+2024-11-26 16:57:36,919 - INFO - Partition 1 processing
+2024-11-26 16:57:36,937 - INFO - reading batch[5] client 4
+2024-11-26 16:57:36,957 - INFO - Final partition
+2024-11-26 16:57:36,958 - INFO - Final partition processing
+2024-11-26 16:57:36,973 - INFO - Loss: 2.31754732131958
+2024-11-26 16:57:36,974 - INFO - reading batch[6] client 1
+2024-11-26 16:57:36,995 - INFO - Partition 2 processing
+2024-11-26 16:57:37,005 - INFO - reading batch[6] client 2
+2024-11-26 16:57:37,025 - INFO - Partition 1 processing
+2024-11-26 16:57:37,039 - INFO - reading batch[6] client 3
+2024-11-26 16:57:37,056 - INFO - Partition 1 processing
+2024-11-26 16:57:37,073 - INFO - reading batch[6] client 4
+2024-11-26 16:57:37,092 - INFO - Partition 1 processing
+2024-11-26 16:57:37,106 - INFO - reading batch[7] client 1
+2024-11-26 16:57:37,131 - INFO - Partition 2 processing
+2024-11-26 16:57:37,139 - INFO - reading batch[7] client 2
+2024-11-26 16:57:37,160 - INFO - Partition 1 processing
+2024-11-26 16:57:37,176 - INFO - reading batch[7] client 3
+2024-11-26 16:57:37,196 - INFO - Partition 4 processing
+2024-11-26 16:57:37,196 - INFO - reading batch[7] client 4
+2024-11-26 16:57:37,268 - CRITICAL - we have message type backward
+2024-11-26 16:57:37,275 - INFO - reading batch[8] client 1
+2024-11-26 16:57:37,321 - INFO - Partition 1 processing
+2024-11-26 16:57:37,334 - INFO - reading batch[8] client 2
+2024-11-26 16:57:37,354 - INFO - Partition 3 processing
+2024-11-26 16:57:37,356 - INFO - reading batch[8] client 3
+2024-11-26 16:57:37,376 - INFO - Partition 1 processing
+2024-11-26 16:57:37,389 - INFO - reading batch[8] client 4
+2024-11-26 16:57:37,409 - INFO - Partition 1 processing
+2024-11-26 16:57:37,423 - INFO - reading batch[9] client 1
+2024-11-26 16:57:37,442 - INFO - Partition 2 processing
+2024-11-26 16:57:37,451 - INFO - reading batch[9] client 2
+2024-11-26 16:57:37,470 - INFO - Partition 1 processing
+2024-11-26 16:57:37,482 - INFO - reading batch[9] client 3
+2024-11-26 16:57:37,506 - INFO - Partition 1 processing
+2024-11-26 16:57:37,521 - INFO - reading batch[9] client 4
+2024-11-26 16:57:37,543 - INFO - Partition 1 processing
+2024-11-26 16:57:37,556 - INFO - reading batch[10] client 1
+2024-11-26 16:57:37,577 - INFO - Partition 2 processing
+2024-11-26 16:57:37,589 - INFO - reading batch[10] client 2
+2024-11-26 16:57:37,607 - INFO - Partition 3 processing
+2024-11-26 16:57:37,608 - INFO - reading batch[10] client 3
+2024-11-26 16:57:37,626 - INFO - Partition 1 processing
+2024-11-26 16:57:37,643 - INFO - reading batch[10] client 4
+2024-11-26 16:57:37,661 - INFO - Partition 1 processing
+2024-11-26 16:57:37,677 - INFO - reading batch[11] client 1
+2024-11-26 16:57:37,695 - INFO - Partition 2 processing
+2024-11-26 16:57:37,707 - INFO - reading batch[11] client 2
+2024-11-26 16:57:37,731 - INFO - Partition 1 processing
+2024-11-26 16:57:37,743 - INFO - reading batch[11] client 3
+2024-11-26 16:57:37,767 - INFO - Partition 4 processing
+2024-11-26 16:57:37,769 - INFO - reading batch[11] client 4
+2024-11-26 16:57:37,789 - INFO - Partition 1 processing
+2024-11-26 16:57:37,803 - INFO - reading batch[12] client 1
+2024-11-26 16:57:37,825 - INFO - Partition 1 processing
+2024-11-26 16:57:37,844 - INFO - reading batch[12] client 2
+2024-11-26 16:57:37,864 - INFO - Partition 3 processing
+2024-11-26 16:57:37,868 - INFO - reading batch[12] client 3
+2024-11-26 16:57:37,890 - INFO - Partition 1 processing
+2024-11-26 16:57:37,903 - INFO - reading batch[12] client 4
+2024-11-26 16:57:37,924 - INFO - Partition 1 processing
+2024-11-26 16:57:37,938 - INFO - reading batch[13] client 1
+2024-11-26 16:57:37,964 - INFO - Partition 2 processing
+2024-11-26 16:57:37,975 - INFO - reading batch[13] client 2
+2024-11-26 16:57:38,001 - INFO - Partition 1 processing
+2024-11-26 16:57:38,015 - INFO - reading batch[13] client 3
+2024-11-26 16:57:38,040 - INFO - Partition 1 processing
+2024-11-26 16:57:38,055 - INFO - reading batch[13] client 4
+2024-11-26 16:57:38,073 - INFO - Partition 1 processing
+2024-11-26 16:57:38,086 - INFO - reading batch[14] client 1
+2024-11-26 16:57:38,106 - INFO - Partition 2 processing
+2024-11-26 16:57:38,116 - INFO - reading batch[14] client 2
+2024-11-26 16:57:38,139 - INFO - Partition 1 processing
+2024-11-26 16:57:38,152 - INFO - reading batch[14] client 3
+2024-11-26 16:57:38,172 - INFO - Partition 4 processing
+2024-11-26 16:57:38,172 - INFO - reading batch[14] client 4
+2024-11-26 16:57:38,195 - INFO - Partition 1 processing
+2024-11-26 16:57:38,212 - INFO - reading batch[15] client 1
+2024-11-26 16:57:38,237 - INFO - Partition 2 processing
+2024-11-26 16:57:38,243 - INFO - reading batch[15] client 2
+2024-11-26 16:57:38,266 - INFO - Partition 3 processing
+2024-11-26 16:57:38,269 - INFO - reading batch[15] client 3
+2024-11-26 16:57:38,293 - INFO - Partition 1 processing
+2024-11-26 16:57:38,308 - INFO - reading batch[15] client 4
+2024-11-26 16:57:38,330 - INFO - Partition 1 processing
+2024-11-26 16:57:38,345 - INFO - reading batch[16] client 1
+2024-11-26 16:57:38,369 - INFO - Partition 1 processing
+2024-11-26 16:57:38,382 - INFO - reading batch[16] client 2
+2024-11-26 16:57:38,406 - INFO - Partition 1 processing
+2024-11-26 16:57:38,421 - INFO - reading batch[16] client 3
+2024-11-26 16:57:38,443 - INFO - Partition 1 processing
+2024-11-26 16:57:38,457 - INFO - reading batch[16] client 4
+2024-11-26 16:57:38,480 - INFO - Partition 1 processing
+2024-11-26 16:57:38,496 - INFO - reading batch[17] client 1
+2024-11-26 16:57:38,520 - INFO - Partition 2 processing
+2024-11-26 16:57:38,529 - INFO - reading batch[17] client 2
+2024-11-26 16:57:38,554 - INFO - Partition 3 processing
+2024-11-26 16:57:38,556 - INFO - reading batch[17] client 3
+2024-11-26 16:57:38,576 - INFO - Partition 4 processing
+2024-11-26 16:57:38,577 - INFO - reading batch[17] client 4
+2024-11-26 16:57:38,601 - INFO - Partition 1 processing
+2024-11-26 16:57:38,614 - INFO - reading batch[18] client 1
+2024-11-26 16:57:38,633 - INFO - Partition 2 processing
+2024-11-26 16:57:38,640 - INFO - reading batch[18] client 2
+2024-11-26 16:57:38,658 - INFO - Partition 1 processing
+2024-11-26 16:57:38,674 - INFO - reading batch[18] client 3
+2024-11-26 16:57:38,695 - INFO - Partition 1 processing
+2024-11-26 16:57:38,709 - INFO - reading batch[18] client 4
+2024-11-26 16:57:38,728 - INFO - Partition 1 processing
+2024-11-26 16:57:38,744 - INFO - reading batch[19] client 1
+2024-11-26 16:57:38,764 - INFO - Partition 1 processing
+2024-11-26 16:57:38,778 - INFO - reading batch[19] client 2
+2024-11-26 16:57:38,798 - INFO - Partition 3 processing
+2024-11-26 16:57:38,801 - INFO - reading batch[19] client 3
+2024-11-26 16:57:38,821 - INFO - Partition 1 processing
+2024-11-26 16:57:38,839 - INFO - reading batch[19] client 4
+2024-11-26 16:57:38,861 - INFO - Partition 1 processing
+2024-11-26 16:57:38,873 - INFO - reading batch[20] client 1
+2024-11-26 16:57:38,895 - INFO - Partition 2 processing
+2024-11-26 16:57:38,903 - INFO - reading batch[20] client 2
+2024-11-26 16:57:38,926 - INFO - Partition 1 processing
+2024-11-26 16:57:38,938 - INFO - reading batch[20] client 3
+2024-11-26 16:57:38,959 - INFO - Final partition
+2024-11-26 16:57:38,959 - INFO - Final partition processing
+2024-11-26 16:57:38,960 - INFO - Loss: 2.310173511505127
+2024-11-26 16:57:38,960 - INFO - reading batch[20] client 4
