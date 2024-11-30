@@ -13,10 +13,9 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
         logging.FileHandler("app.log"),
-        logging.StreamHandler()
+        # logging.StreamHandler()  # Remove or comment this line
     ]
 )
-
 
 
 # Async Client Class
@@ -48,9 +47,30 @@ class Client:
                 batch_id = data["batch_id"]
                 client_id = data["client_id"]
                 message_type = data["message_type"]
-                if message_type == "forward":
+                                        
+                if message_type == "backward":
+                    oldGradient = data.get("gradient")
+                    newGradient = await self.partition.backward(oldGradient)
+                    logging.critical(f"calculate backward ${stage} on client{self.client_id}")
+                    logging.critical(f"new gradient:{newGradient} \n old gradient:{oldGradient}")
+                    stage -= 1
+
+                    if stage !=0:
+                        self.input_queue[stage].put({
+                            "output":x ,
+                            "gradient":newGradient,
+                            "stage":stage,
+                            "source":client_id,
+                            "batch_id":batch_id,
+                            "client_id":client_id,
+                            "epoch":epoch,
+                            "message_type":"backward"
+                        })
+
+
+                else:
                     if stage == 1 :
-                        output = await self.partition1.process(x)
+                        output = await self.partition1.forward(x)
                         stage +=1 
 
                         # save for backward handling
@@ -73,7 +93,7 @@ class Client:
 
 
                     elif stage != 5:
-                        output = await self.partition.process(x)
+                        output = await self.partition.forward(x)
                         # logging.info(f"Epoch [{current_epoch}]: x value in client[{client_id}] stage:[{stage}] = {x}")
 
                            # save for backward handling
@@ -112,9 +132,10 @@ class Client:
                     else:
                         logging.info("Final partition")
                         # idBackwardMessage = str(uuid.uuid4())
-                        loss = await self.final_partition.process(x, self.dataStoreLabels[batch_id])
+                        loss , gradFinal = await self.final_partition.compute_loss_and_grad(x, self.dataStoreLabels[batch_id])
                         self.input_queue[4].put({
                             "output":loss ,
+                            "gradient":gradFinal,
                             "stage":4,
                             "source":client_id,
                             "batch_id":batch_id,
@@ -122,16 +143,6 @@ class Client:
                             "epoch":epoch,
                             "message_type":"backward"
                         })
-                        
-                else:
-                    logging.critical("we have message type backward")
-                    if stage == 4:
-                        output_data = self.dataStore[batch_id]["4"]["output_data"]
-                        logging.critical(f"type of loss is :{type(x)}")
-                        if isinstance(x, torch.Tensor):
-                            grad_output = torch.autograd.grad(x, output_data, retain_graph=True)[0]
-                            logging.critical(f"Gradient computed successfully: {grad_output}")
-
 
 
                                  
@@ -139,8 +150,9 @@ class Client:
                 logging.info(f"reading batch[{self.dataManager.batch_count}] client {self.client_id}")
                 random_id = str(uuid.uuid4())
                 features, labels = self.dataManager.next_batch()
+                x = features.clone().detach().requires_grad_(True)
                 self.input_queue[self.client_id].put({
-                    "output":features ,
+                    "output":x ,
                     "stage": 1,
                     "source": self.client_id,
                     "destination": self.client_id,
@@ -157,6 +169,10 @@ class Client:
                 logging.info(f'all data read and data Store for client ')
             
             await asyncio.sleep(0)
+
+
+
+
 # Initialize Queues and Partitions
 queues = {i: Queue() for i in range(1, 6)}
 partition1 = Partition1()
@@ -166,7 +182,7 @@ partition4 = Partition4()
 final_partition = FinalPartition()
 
 # Create Clients
-client1 = Client(1, partition1, None, final_partition, queues)
+client1 = Client(1, partition1, partition1, final_partition, queues)
 client2 = Client(2, partition1, partition2, final_partition, queues)
 client3 = Client(3, partition1, partition3, final_partition, queues)
 client4 = Client(4, partition1, partition4, final_partition, queues)

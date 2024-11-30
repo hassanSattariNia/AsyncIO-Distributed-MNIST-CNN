@@ -15,7 +15,7 @@ class DataLoader:
 
         self.transform = transforms.Compose([
             transforms.ToTensor(),
-            transforms.Normalize((0.5,), (0.5,))  # For single-channel images
+            transforms.Normalize((0.1307,), (0.3081,))  # For single-channel images
         ])
 
         self.dataset_train, self.dataset_test = self.loadDataSet()
@@ -87,7 +87,7 @@ class DataManager:
 # Usage example
 if __name__ == "__main__":
     # Import and initialize the DataLoader for MNIST
-    data_loader = DataLoader(dataset='mnist', batch_size=64)
+    data_loader = DataLoader(dataset='mnist', batch_size=32)
 
     # Set mode to 'train'
     data_loader.set_mode("train")
