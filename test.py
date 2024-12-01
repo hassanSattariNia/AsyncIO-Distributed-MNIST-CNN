@@ -52,7 +52,6 @@ class Client:
                 if message_type == "backward":
                     oldGradient = data.get("gradient")
                     newGradient = await self.partition.backward(oldGradient,batch_id)
-                    writeLog(self.client_id,f"batch id_{batch_id} backward from stage {stage}")
                     stage -= 1
 
                     if stage !=0:
@@ -84,8 +83,6 @@ class Client:
                         self.input_queue[stage].put({
                             "output":output  ,
                             "stage": stage,
-                            "source": self.client_id,
-                            "destination": stage,
                             "client_id": self.client_id,
                             "batch_id":batch_id ,
                             "epoch": epoch,
@@ -110,8 +107,6 @@ class Client:
                             self.input_queue[client_id].put({
                                 "output": output,
                                 "stage": 5,
-                                "source": self.client_id,
-                                "destination": client_id,
                                 "client_id": client_id,
                                 "batch_id":batch_id ,
                                 "epoch": epoch,
@@ -122,8 +117,6 @@ class Client:
                             self.input_queue[stage].put({
                                 "output": output,
                                 "stage": stage,
-                                "source": self.client_id,
-                                "destination": stage,
                                 "client_id": client_id,
                                 "batch_id":batch_id ,
                                 "epoch": epoch,
@@ -143,6 +136,7 @@ class Client:
                             "message_type":"backward"
                         })
                         print(f"loss value is :{loss}")
+                        writeLog(client_id , f"loss :{loss}")
 
 
                                  
@@ -153,8 +147,6 @@ class Client:
                 self.input_queue[self.client_id].put({
                     "output":x ,
                     "stage": 1,
-                    "source": self.client_id,
-                    "destination": self.client_id,
                     "client_id": self.client_id,
                     "batch_id":random_id ,
                     "epoch":self.dataManager.epoch,
