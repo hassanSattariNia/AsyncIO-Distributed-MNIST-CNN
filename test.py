@@ -29,7 +29,7 @@ class Client:
         self.input_queue = input_queue
         self.dataManager = self.dataLoaderMnist()
         self.dataStoreLabels = {}
-        self.dataStore = {}
+        self.dataStore = []
 
     def dataLoaderMnist(self):
         data_loader = DataLoader(dataset='mnist', batch_size=64)
@@ -86,13 +86,7 @@ class Client:
                         output = await self.partition1.forward(x,batch_id)
                         stage += 1 
                         trace += "-forward1_2-"
-                        # save for backward handling
-                        if batch_id not in self.dataStore:
-                            self.dataStore[batch_id] = {"1": {}}
-                        self.dataStore[batch_id]["1"]["input_data"] = x
-                        self.dataStore[batch_id]["1"]["output_data"] = output    
-                        
-
+                    
                         # forward to second stage
                         self.input_queue[stage].put({
                             "output":output  ,
@@ -106,15 +100,6 @@ class Client:
                     elif stage != 5:
                         output = await self.partition.forward(x,batch_id)
                         # logger1.info(f"Epoch [{current_epoch}]: x value in client[{client_id}] stage:[{stage}] = {x}")
-
-                           # save for backward handling
-                        if batch_id not in self.dataStore:
-                            self.dataStore[batch_id] = {f"{stage}": {}}  # اگر batch_id وجود ندارد، به همراه "1" آن را ایجاد می‌کنیم
-                        elif f"{stage}" not in self.dataStore[batch_id]:
-                            self.dataStore[batch_id][f"{stage}"] = {}  
-                        self.dataStore[batch_id][f"{stage}"]["input_data"] = x
-                        self.dataStore[batch_id][f"{stage}"]["output_data"] = output    
-                        
                         trace += f"-forward{stage}_{stage+1}-"
                         if stage == 4:
                             # if stage 4 => send data to client that is owner of data
