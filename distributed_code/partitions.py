@@ -7,15 +7,6 @@ import time
 import torch.nn as nn 
 import torch.optim as optim
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("app.log"),
-        # logging.StreamHandler()
-    ]
-)
 
 class DataStore:
     def __init__(self):
@@ -26,6 +17,9 @@ class DataStore:
     
     def get (self , name):
         return self.data.get(name , None)
+    
+    def delete(self , name):
+        del self.data[name]
 
 
 class Partition1:
@@ -39,17 +33,15 @@ class Partition1:
         self.dataStore = DataStore()
 
     async def forward(self, data , batch_id):
-        print("partition1 forward")
         self.activations = data.detach().requires_grad_(True)
         output = self.layers(self.activations)
         self.dataStore.save(batch_id , self.activations)  # Save activations for backward pass
         return output
 
     async def backward(self, grad_output,batch_id):
-        print("partition1 backward")
-
         self.optimizer.zero_grad()
         activations = self.dataStore.get(batch_id)
+        self.dataStore.delete(batch_id)
         output = self.layers(activations)
         output.backward(grad_output)
         self.optimizer.step()
@@ -68,19 +60,16 @@ class Partition2:
         self.dataStore = DataStore()
     
     async def forward(self, data,batch_id):
-        # Ensure data requires gradient
-        print("partition2 forward")
-        
+        # Ensure data requires gradient        
         self.activations = data.detach().requires_grad_(True)
         output = self.layers(self.activations)
         self.dataStore.save(batch_id, self.activations)
         return output
 
     async def backward(self, grad_output,batch_id):
-        print("partition2 backward")
-
         self.optimizer.zero_grad()
         activations = self.dataStore.get(batch_id)
+        self.dataStore.delete(batch_id)
         output = self.layers(activations)
         output.backward(grad_output)
         self.optimizer.step()
@@ -99,7 +88,6 @@ class Partition3:
 
     async def forward(self, data ,batch_id):
         # Ensure data requires gradient
-        print("partition3 forward")
 
         self.activations = data.detach().requires_grad_(True)
         x = self.flatten(self.activations)
@@ -108,10 +96,10 @@ class Partition3:
         return output
 
     async def backward(self, grad_output ,batch_id):
-        print("partition3 backward")
 
         self.optimizer.zero_grad()
         activations = self.dataStore.get(batch_id)
+        self.dataStore.delete(batch_id)
         x = self.flatten(activations)
         output = self.linear(x)
         output.backward(grad_output)
@@ -127,18 +115,15 @@ class Partition4:
 
     async def forward(self, data, batch_id):
         # Ensure data requires gradient
-        print("partition4 forward")
-
         self.activations = data.detach().requires_grad_(True)
         output = self.layers(self.activations)
         self.dataStore.save(batch_id, self.activations)
         return output
 
     async def backward(self, grad_output ,batch_id):
-        print("partition4 backward")
-
         self.optimizer.zero_grad()
         activations = self.dataStore.get(batch_id)
+        self.dataStore.delete(batch_id)
         output = self.layers(activations)
         output.backward(grad_output)
         self.optimizer.step()

@@ -8,7 +8,7 @@ import torch
 from distributed_code.partitions import Partition1 , Partition2 , Partition3 , Partition4 , FinalPartition
 
 from logger import logger1 , logger2  , logger3 , logger4
-
+# write message with client logger
 def writeLog(client_id,message):
     if client_id == 1:
         logger1.info(message)
@@ -19,7 +19,7 @@ def writeLog(client_id,message):
     else:
         logger4.info(message)
     
-# Async Client Class
+
 class Client:
     def __init__(self, client_id, partition1, partition, final_partition, input_queue):
         self.client_id = client_id
@@ -38,40 +38,54 @@ class Client:
         return data_manager
 
     async def run(self):
-        print(f"start run function in client {self.client_id}")
+        print(f"client is running... {self.client_id}")
         while True:
             if not self.input_queue[self.client_id].empty():
                 data = self.input_queue[self.client_id].get()
                 x = data["output"]
                 stage = data["stage"]
-                epoch = data["epoch"]
                 batch_id = data["batch_id"]
                 client_id = data["client_id"]
                 message_type = data["message_type"]
+                trace = data["trace"]
                                         
                 if message_type == "backward":
-                    oldGradient = data.get("gradient")
-                    newGradient = await self.partition.backward(oldGradient,batch_id)
-                    stage -= 1
+                    # completed backward
+                    if stage ==0:
+                        message = f"client id:{client_id} in client:{self.client_id},trace is:{trace}"
+                        writeLog(client_id, message=message)
+                    else :
+                        oldGradient = data.get("gradient")
+                        newGradient = None
+                        destination_client = None
+                        if stage == 1 :
+                            newGradient = await self.partition1.backward(oldGradient,batch_id)
+                            destination_client = client_id
+                        else:
+                            newGradient = await self.partition.backward(oldGradient,batch_id)
+                            destination_client = stage - 1
+                        trace += f"-backward{stage}_{stage-1}-"
+                        stage -= 1
 
-                    if stage !=0:
-                        self.input_queue[stage].put({
+                        
+                        self.input_queue[destination_client].put({
                             "output":x ,
                             "gradient":newGradient,
                             "stage":stage,
                             "source":client_id,
                             "batch_id":batch_id,
                             "client_id":client_id,
-                            "epoch":epoch,
-                            "message_type":"backward"
+                            "message_type":"backward",
+                            "trace":trace
                         })
+                  
 
 
                 else:
                     if stage == 1 :
                         output = await self.partition1.forward(x,batch_id)
-                        stage +=1 
-
+                        stage += 1 
+                        trace += "-forward1_2-"
                         # save for backward handling
                         if batch_id not in self.dataStore:
                             self.dataStore[batch_id] = {"1": {}}
@@ -79,13 +93,13 @@ class Client:
                         self.dataStore[batch_id]["1"]["output_data"] = output    
                         
 
-
+                        # forward to second stage
                         self.input_queue[stage].put({
                             "output":output  ,
                             "stage": stage,
-                            "client_id": self.client_id,
+                            "client_id": client_id,
                             "batch_id":batch_id ,
-                            "epoch": epoch,
+                            "trace":trace ,
                             "message_type":"forward" })
 
 
@@ -101,7 +115,7 @@ class Client:
                         self.dataStore[batch_id][f"{stage}"]["input_data"] = x
                         self.dataStore[batch_id][f"{stage}"]["output_data"] = output    
                         
-                        
+                        trace += f"-forward{stage}_{stage+1}-"
                         if stage == 4:
                             # if stage 4 => send data to client that is owner of data
                             self.input_queue[client_id].put({
@@ -109,8 +123,8 @@ class Client:
                                 "stage": 5,
                                 "client_id": client_id,
                                 "batch_id":batch_id ,
-                                "epoch": epoch,
-                                "message_type":"forward"
+                                "message_type":"forward",
+                                "trace":trace
                             })
                         else:
                             stage += 1
@@ -119,12 +133,14 @@ class Client:
                                 "stage": stage,
                                 "client_id": client_id,
                                 "batch_id":batch_id ,
-                                "epoch": epoch,
-                                "message_type":"forward"
+                                "message_type":"forward",
+                                "trace":trace
                             })
+                    # stage = 5
                     else:
                         # idBackwardMessage = str(uuid.uuid4())
                         loss , gradFinal = await self.final_partition.compute_loss_and_grad(x, self.dataStoreLabels[batch_id])
+                        trace += f"-loss:${loss}-backward5_4"
                         self.input_queue[4].put({
                             "output":loss ,
                             "gradient":gradFinal,
@@ -132,32 +148,35 @@ class Client:
                             "source":client_id,
                             "batch_id":batch_id,
                             "client_id":client_id,
-                            "epoch":epoch,
-                            "message_type":"backward"
+                            "message_type":"backward",
+                            "trace":trace
                         })
                         print(f"loss value is :{loss}")
                         writeLog(client_id , f"loss :{loss}")
 
 
+            
+            
                                  
+            # read new data => (have to change and read data after complete backward) 
             if self.dataManager.epoch < 1:
                 random_id = str(uuid.uuid4())
                 features, labels = self.dataManager.next_batch()
                 x = features.clone().detach().requires_grad_(True)
                 self.input_queue[self.client_id].put({
-                    "output":x ,
+                    "output": x ,
                     "stage": 1,
                     "client_id": self.client_id,
                     "batch_id":random_id ,
-                    "epoch":self.dataManager.epoch,
-                    "message_type":"forward"
+                    "message_type":"forward",
+                    "trace":f"{self.dataManager.batch_count}"
                 })
                 self.dataStoreLabels[random_id]= labels
 
                   
 
             else:
-                logger1.info(f'all data read and data Store for client ')
+                writeLog(self.client_id, "all data read ..")
             
             await asyncio.sleep(0)
 
