@@ -52,6 +52,7 @@ class Client:
                 if message_type == "backward":
                     # completed backward
                     if stage ==0:
+                        self.dataStore.remove(batch_id)
                         message = f"client id:{client_id} in client:{self.client_id},trace is:{trace}"
                         writeLog(client_id, message=message)
                     else :
@@ -145,19 +146,20 @@ class Client:
                                  
             # read new data => (have to change and read data after complete backward) 
             if self.dataManager.epoch < 1:
-                random_id = str(uuid.uuid4())
-                features, labels = self.dataManager.next_batch()
-                x = features.clone().detach().requires_grad_(True)
-                self.input_queue[self.client_id].put({
-                    "output": x ,
-                    "stage": 1,
-                    "client_id": self.client_id,
-                    "batch_id":random_id ,
-                    "message_type":"forward",
-                    "trace":f"{self.dataManager.batch_count}"
-                })
-                self.dataStoreLabels[random_id]= labels
-
+                if not self.dataStore:
+                    random_id = str(uuid.uuid4())
+                    features, labels = self.dataManager.next_batch()
+                    x = features.clone().detach().requires_grad_(True)
+                    self.input_queue[self.client_id].put({
+                        "output": x ,
+                        "stage": 1,
+                        "client_id": self.client_id,
+                        "batch_id":random_id ,
+                        "message_type":"forward",
+                        "trace":f"{self.dataManager.batch_count}"
+                    })
+                    self.dataStoreLabels[random_id]= labels
+                    self.dataStore.append(random_id)
                   
 
             else:
