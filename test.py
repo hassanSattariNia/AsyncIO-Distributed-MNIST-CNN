@@ -7,17 +7,18 @@ import time
 import torch
 from distributed_code.partitions import Partition1 , Partition2 , Partition3 , Partition4 , FinalPartition
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("app.log"),
-        # logging.StreamHandler()  # Remove or comment this line
-    ]
-)
+from logger import logger1 , logger2  , logger3 , logger4
 
-
+def writeLog(client_id,message):
+    if client_id == 1:
+        logger1.info(message)
+    elif client_id ==2:
+        logger2.info(message)
+    elif client_id==3:
+        logger3.info(message)
+    else:
+        logger4.info(message)
+    
 # Async Client Class
 class Client:
     def __init__(self, client_id, partition1, partition, final_partition, input_queue):
@@ -50,9 +51,8 @@ class Client:
                                         
                 if message_type == "backward":
                     oldGradient = data.get("gradient")
-                    newGradient = await self.partition.backward(oldGradient)
-                    logging.critical(f"calculate backward ${stage} on client{self.client_id}")
-                    logging.critical(f"new gradient:{newGradient} \n old gradient:{oldGradient}")
+                    newGradient = await self.partition.backward(oldGradient,batch_id)
+                    writeLog(self.client_id,f"batch id_{batch_id} backward from stage {stage}")
                     stage -= 1
 
                     if stage !=0:
@@ -70,7 +70,7 @@ class Client:
 
                 else:
                     if stage == 1 :
-                        output = await self.partition1.forward(x)
+                        output = await self.partition1.forward(x,batch_id)
                         stage +=1 
 
                         # save for backward handling
@@ -93,8 +93,8 @@ class Client:
 
 
                     elif stage != 5:
-                        output = await self.partition.forward(x)
-                        # logging.info(f"Epoch [{current_epoch}]: x value in client[{client_id}] stage:[{stage}] = {x}")
+                        output = await self.partition.forward(x,batch_id)
+                        # logger1.info(f"Epoch [{current_epoch}]: x value in client[{client_id}] stage:[{stage}] = {x}")
 
                            # save for backward handling
                         if batch_id not in self.dataStore:
@@ -130,7 +130,6 @@ class Client:
                                 "message_type":"forward"
                             })
                     else:
-                        logging.info("Final partition")
                         # idBackwardMessage = str(uuid.uuid4())
                         loss , gradFinal = await self.final_partition.compute_loss_and_grad(x, self.dataStoreLabels[batch_id])
                         self.input_queue[4].put({
@@ -143,11 +142,11 @@ class Client:
                             "epoch":epoch,
                             "message_type":"backward"
                         })
+                        print(f"loss value is :{loss}")
 
 
                                  
             if self.dataManager.epoch < 1:
-                logging.info(f"reading batch[{self.dataManager.batch_count}] client {self.client_id}")
                 random_id = str(uuid.uuid4())
                 features, labels = self.dataManager.next_batch()
                 x = features.clone().detach().requires_grad_(True)
@@ -166,7 +165,7 @@ class Client:
                   
 
             else:
-                logging.info(f'all data read and data Store for client ')
+                logger1.info(f'all data read and data Store for client ')
             
             await asyncio.sleep(0)
 
