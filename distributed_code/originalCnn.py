@@ -63,8 +63,8 @@ def train(model, device, train_loader, optimizer, criterion, epoch):
         if (batch_idx + 1) % 100 == 0:
           print(f'Epoch [{epoch}] Batch [{batch_idx+1}/{len(train_loader)}] '
                 f'Loss: {loss.item():.4f}')
-          data_loss = f'{batch_idx + 1} {loss.item():.4f}'
-          write_to_file("original_loss.text",data_loss,False)
+        data_loss = f'{batch_idx + 1} {loss.item():.4f}'
+        write_to_file("original_loss.text",data_loss,False)
           
     avg_loss = total_loss / len(train_loader)
     print(f'==> Epoch [{epoch}] Average training loss: {avg_loss:.4f}')

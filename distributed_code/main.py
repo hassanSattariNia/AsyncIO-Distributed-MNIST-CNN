@@ -47,7 +47,7 @@ class Client:
         self.dataStore = []
 
     def dataLoaderMnist(self):
-        data_loader = DataLoader(dataset='mnist', batch_size=64)
+        data_loader = DataLoader(dataset='mnist', batch_size=32)
         data_loader.set_mode("train")
         data_manager = DataManager(data_loader)
         return data_manager
