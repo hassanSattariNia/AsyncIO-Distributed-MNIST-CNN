@@ -7,12 +7,22 @@ import time
 import torch
 from partitions import Partition1 , Partition2 , Partition3 , Partition4 , FinalPartition
 
-from logger import create_logger
+from logger import create_logger , write_to_file
 
 logger1 = create_logger("client1", clear_log=True)
 logger2 = create_logger("client2", clear_log=True)
 logger3 = create_logger("client3", clear_log=True)
 logger4 = create_logger("client4", clear_log=True)
+
+def writeLoss(client_id,data_loss):
+    if client_id == 1:
+        write_to_file("loss_1",data=data_loss)
+    elif client_id ==2:
+        write_to_file("loss_2",data=data_loss)
+    elif client_id==3:
+        write_to_file("loss_3",data=data_loss)
+    else:
+        write_to_file("loss_4",data=data_loss)
 # write message with client logger
 def writeLog(client_id,message):
     if client_id == 1:
@@ -144,6 +154,10 @@ class Client:
                         })
                         print(f"loss value is :{loss}")
                         writeLog(client_id , f"loss :{loss}")
+                        
+
+                        
+                        writeLoss(client_id , f'{0} {loss}')
 
 
             

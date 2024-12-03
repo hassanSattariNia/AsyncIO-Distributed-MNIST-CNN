@@ -25,3 +25,9 @@ def create_logger(filename, clear_log=True):
     return logger
 
 
+def write_to_file(file_name, data, overwrite=False):
+    # Open file in 'w' mode if overwrite is True, else 'a' for appending
+    mode = 'w' if overwrite else 'a'
+    
+    with open(file_name, mode) as file:
+          file.write(f"{data}\n")

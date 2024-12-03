@@ -3,10 +3,9 @@ import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
-import logging
-
+from logger import create_logger , write_to_file
 # Set up logging
-logging.basicConfig(level=logging.CRITICAL)
+logger = create_logger("modelSplitted",True)
 
 # DataStore class to store intermediate activations and gradients
 class DataStore:
@@ -27,7 +26,7 @@ class Partition1:
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=2)
         )
-        self.optimizer = optim.SGD(self.layers.parameters(), lr=0.01)
+        self.optimizer = optim.SGD(self.layers.parameters(), lr=0.001)
         self.data_store = DataStore()  # DataStore for this partition
 
     def forward(self, data):
@@ -53,7 +52,7 @@ class Partition2:
             nn.ReLU(),
             nn.MaxPool2d(kernel_size=2)
         )
-        self.optimizer = optim.SGD(self.layers.parameters(), lr=0.01)
+        self.optimizer = optim.SGD(self.layers.parameters(), lr=0.001)
         self.data_store = DataStore()
 
     def forward(self, data):
@@ -103,7 +102,7 @@ class Partition3:
 class Partition4:
     def __init__(self):
         self.layers = nn.Linear(512, 10)
-        self.optimizer = optim.SGD(self.layers.parameters(), lr=0.01)
+        self.optimizer = optim.SGD(self.layers.parameters(), lr=0.001)
         self.data_store = DataStore()
 
     def forward(self, data):
@@ -130,7 +129,7 @@ class FinalPartition:
         # Ensure predictions require gradient
         predictions = predictions.detach().requires_grad_(True)
         loss = self.loss_fn(predictions, labels)
-        logging.critical(f"Loss value is: {loss.item()}")
+        logger.critical(f"Loss value is: {loss.item()}")
         # Compute gradient of loss w.r.t. predictions
         loss.backward()
         grad_output = predictions.grad
@@ -144,6 +143,8 @@ transform = transforms.Compose([
 train_data = datasets.MNIST(root='./data', train=True, download=True, transform=transform)
 train_loader = DataLoader(train_data, batch_size=32, shuffle=True)
 
+write_to_file("splitted_loss.text","loss values ",True)
+
 # Training function
 def train_model():
     # Initialize partitions
@@ -154,7 +155,7 @@ def train_model():
     final_partition = FinalPartition()
 
     # Training loop
-    for epoch in range(5):
+    for epoch in range(1):
         for batch_idx, (data, labels) in enumerate(train_loader):
             # Forward pass through each partition
             out1 = partition1.forward(data)
@@ -174,7 +175,9 @@ def train_model():
             # Logging the loss
             if (batch_idx + 1) % 100 == 0:
                 print(f"Epoch [{epoch+1}], Batch [{batch_idx+1}/{len(train_loader)}], Loss: {loss_value}")
-
+                data_loss = f'{loss_value}'
+                write_to_file("splitted_loss.text",f'{batch_idx + 1} {data_loss}',False)
+            
     print("Training completed.")
 
 train_model()
