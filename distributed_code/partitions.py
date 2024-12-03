@@ -1,7 +1,7 @@
 import asyncio
 import logging
 from queue import Queue
-from distributed_code.dataloader import DataLoader , DataManager
+from dataloader import DataLoader , DataManager
 import uuid
 import time
 import torch.nn as nn 

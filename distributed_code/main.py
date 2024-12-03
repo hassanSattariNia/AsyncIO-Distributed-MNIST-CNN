@@ -1,13 +1,18 @@
 import asyncio
 import logging
 from queue import Queue
-from distributed_code.dataloader import DataLoader , DataManager
+from dataloader import DataLoader , DataManager
 import uuid
 import time
 import torch
-from distributed_code.partitions import Partition1 , Partition2 , Partition3 , Partition4 , FinalPartition
+from partitions import Partition1 , Partition2 , Partition3 , Partition4 , FinalPartition
 
-from logger import logger1 , logger2  , logger3 , logger4
+from logger import create_logger
+
+logger1 = create_logger("client1", clear_log=True)
+logger2 = create_logger("client2", clear_log=True)
+logger3 = create_logger("client3", clear_log=True)
+logger4 = create_logger("client4", clear_log=True)
 # write message with client logger
 def writeLog(client_id,message):
     if client_id == 1:

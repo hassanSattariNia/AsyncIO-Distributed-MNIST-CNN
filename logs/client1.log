@@ -1,139 +1,53 @@
-2024-12-02 11:03:47,549 - client1 - INFO - logger for client 1
-2024-12-02 11:03:48,090 - client1 - INFO - loss :2.3095126152038574
-2024-12-02 11:03:48,359 - client1 - INFO - client id:1 in client:1,trace is:1-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.3095126152038574-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:48,710 - client1 - INFO - loss :2.3040716648101807
-2024-12-02 11:03:49,259 - client1 - INFO - client id:1 in client:1,trace is:2-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.3040716648101807-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:49,530 - client1 - INFO - loss :2.2870359420776367
-2024-12-02 11:03:50,007 - client1 - INFO - client id:1 in client:1,trace is:3-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.2870359420776367-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:50,345 - client1 - INFO - loss :2.2674245834350586
-2024-12-02 11:03:50,769 - client1 - INFO - client id:1 in client:1,trace is:4-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.2674245834350586-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:51,060 - client1 - INFO - loss :2.2475857734680176
-2024-12-02 11:03:51,810 - client1 - INFO - client id:1 in client:1,trace is:5-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.2475857734680176-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:52,069 - client1 - INFO - loss :2.2422866821289062
-2024-12-02 11:03:52,398 - client1 - INFO - client id:1 in client:1,trace is:6-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.2422866821289062-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:52,699 - client1 - INFO - loss :2.227058172225952
-2024-12-02 11:03:53,190 - client1 - INFO - client id:1 in client:1,trace is:7-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.227058172225952-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:53,465 - client1 - INFO - loss :2.185398817062378
-2024-12-02 11:03:53,794 - client1 - INFO - client id:1 in client:1,trace is:8-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.185398817062378-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:54,059 - client1 - INFO - loss :2.179999828338623
-2024-12-02 11:03:54,397 - client1 - INFO - client id:1 in client:1,trace is:9-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.179999828338623-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:54,635 - client1 - INFO - loss :2.161842107772827
-2024-12-02 11:03:54,940 - client1 - INFO - client id:1 in client:1,trace is:10-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.161842107772827-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:55,237 - client1 - INFO - loss :2.125385284423828
-2024-12-02 11:03:55,583 - client1 - INFO - client id:1 in client:1,trace is:11-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.125385284423828-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:55,903 - client1 - INFO - loss :2.087249994277954
-2024-12-02 11:03:56,242 - client1 - INFO - client id:1 in client:1,trace is:12-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.087249994277954-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:56,512 - client1 - INFO - loss :2.061785936355591
-2024-12-02 11:03:56,866 - client1 - INFO - client id:1 in client:1,trace is:13-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.061785936355591-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:57,127 - client1 - INFO - loss :2.0311715602874756
-2024-12-02 11:03:57,438 - client1 - INFO - client id:1 in client:1,trace is:14-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.0311715602874756-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:57,662 - client1 - INFO - loss :1.9942654371261597
-2024-12-02 11:03:57,975 - client1 - INFO - client id:1 in client:1,trace is:15-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.9942654371261597-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:58,203 - client1 - INFO - loss :1.9506638050079346
-2024-12-02 11:03:58,620 - client1 - INFO - client id:1 in client:1,trace is:16-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.9506638050079346-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:58,889 - client1 - INFO - loss :1.8827054500579834
-2024-12-02 11:03:59,455 - client1 - INFO - client id:1 in client:1,trace is:17-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.8827054500579834-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:03:59,675 - client1 - INFO - loss :1.8187767267227173
-2024-12-02 11:04:00,154 - client1 - INFO - client id:1 in client:1,trace is:18-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.8187767267227173-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:00,421 - client1 - INFO - loss :1.7747104167938232
-2024-12-02 11:04:00,770 - client1 - INFO - client id:1 in client:1,trace is:19-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.7747104167938232-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:01,023 - client1 - INFO - loss :1.68234121799469
-2024-12-02 11:04:01,331 - client1 - INFO - client id:1 in client:1,trace is:20-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.68234121799469-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:01,561 - client1 - INFO - loss :1.5483381748199463
-2024-12-02 11:04:01,835 - client1 - INFO - client id:1 in client:1,trace is:21-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.5483381748199463-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:02,155 - client1 - INFO - loss :1.4856102466583252
-2024-12-02 11:04:02,448 - client1 - INFO - client id:1 in client:1,trace is:22-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.4856102466583252-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:02,696 - client1 - INFO - loss :1.4454009532928467
-2024-12-02 11:04:03,045 - client1 - INFO - client id:1 in client:1,trace is:23-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.4454009532928467-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:03,350 - client1 - INFO - loss :1.4630200862884521
-2024-12-02 11:04:03,749 - client1 - INFO - client id:1 in client:1,trace is:24-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.4630200862884521-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:04,030 - client1 - INFO - loss :1.27021324634552
-2024-12-02 11:04:04,491 - client1 - INFO - client id:1 in client:1,trace is:25-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.27021324634552-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:04,729 - client1 - INFO - loss :1.2890301942825317
-2024-12-02 11:04:05,031 - client1 - INFO - client id:1 in client:1,trace is:26-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.2890301942825317-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:05,266 - client1 - INFO - loss :0.9958159327507019
-2024-12-02 11:04:05,549 - client1 - INFO - client id:1 in client:1,trace is:27-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.9958159327507019-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:05,758 - client1 - INFO - loss :1.088993787765503
-2024-12-02 11:04:06,100 - client1 - INFO - client id:1 in client:1,trace is:28-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.088993787765503-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:06,337 - client1 - INFO - loss :0.9021607637405396
-2024-12-02 11:04:06,611 - client1 - INFO - client id:1 in client:1,trace is:29-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.9021607637405396-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:06,833 - client1 - INFO - loss :0.9228702187538147
-2024-12-02 11:04:07,111 - client1 - INFO - client id:1 in client:1,trace is:30-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.9228702187538147-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:07,321 - client1 - INFO - loss :0.894214391708374
-2024-12-02 11:04:07,595 - client1 - INFO - client id:1 in client:1,trace is:31-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.894214391708374-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:07,805 - client1 - INFO - loss :0.8195949196815491
-2024-12-02 11:04:08,081 - client1 - INFO - client id:1 in client:1,trace is:32-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.8195949196815491-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:08,298 - client1 - INFO - loss :0.7599833607673645
-2024-12-02 11:04:08,574 - client1 - INFO - client id:1 in client:1,trace is:33-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.7599833607673645-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:08,816 - client1 - INFO - loss :0.6631253957748413
-2024-12-02 11:04:09,207 - client1 - INFO - client id:1 in client:1,trace is:34-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.6631253957748413-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:09,480 - client1 - INFO - loss :0.6608184576034546
-2024-12-02 11:04:09,808 - client1 - INFO - client id:1 in client:1,trace is:35-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.6608184576034546-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:10,080 - client1 - INFO - loss :0.5924928188323975
-2024-12-02 11:04:10,342 - client1 - INFO - client id:1 in client:1,trace is:36-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.5924928188323975-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:10,628 - client1 - INFO - loss :0.5737010836601257
-2024-12-02 11:04:10,933 - client1 - INFO - client id:1 in client:1,trace is:37-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.5737010836601257-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:11,193 - client1 - INFO - loss :0.5062722563743591
-2024-12-02 11:04:11,466 - client1 - INFO - client id:1 in client:1,trace is:38-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.5062722563743591-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:11,680 - client1 - INFO - loss :0.7825670838356018
-2024-12-02 11:04:11,952 - client1 - INFO - client id:1 in client:1,trace is:39-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.7825670838356018-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:12,171 - client1 - INFO - loss :0.5427396297454834
-2024-12-02 11:04:12,438 - client1 - INFO - client id:1 in client:1,trace is:40-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.5427396297454834-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:12,636 - client1 - INFO - loss :0.7258598208427429
-2024-12-02 11:04:12,889 - client1 - INFO - client id:1 in client:1,trace is:41-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.7258598208427429-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:13,169 - client1 - INFO - loss :0.6380504965782166
-2024-12-02 11:04:13,403 - client1 - INFO - client id:1 in client:1,trace is:42-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.6380504965782166-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:13,572 - client1 - INFO - loss :0.6761852502822876
-2024-12-02 11:04:13,804 - client1 - INFO - client id:1 in client:1,trace is:43-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.6761852502822876-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:13,986 - client1 - INFO - loss :0.6087125539779663
-2024-12-02 11:04:14,219 - client1 - INFO - client id:1 in client:1,trace is:44-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.6087125539779663-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:14,384 - client1 - INFO - loss :0.5574039220809937
-2024-12-02 11:04:14,635 - client1 - INFO - client id:1 in client:1,trace is:45-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.5574039220809937-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:14,783 - client1 - INFO - loss :0.356467604637146
-2024-12-02 11:04:15,029 - client1 - INFO - client id:1 in client:1,trace is:46-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.356467604637146-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:15,183 - client1 - INFO - loss :0.34895920753479004
-2024-12-02 11:04:15,436 - client1 - INFO - client id:1 in client:1,trace is:47-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.34895920753479004-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:15,618 - client1 - INFO - loss :0.32855892181396484
-2024-12-02 11:04:15,849 - client1 - INFO - client id:1 in client:1,trace is:48-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.32855892181396484-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:16,015 - client1 - INFO - loss :0.29581567645072937
-2024-12-02 11:04:16,249 - client1 - INFO - client id:1 in client:1,trace is:49-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.29581567645072937-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:16,505 - client1 - INFO - loss :0.38763734698295593
-2024-12-02 11:04:16,766 - client1 - INFO - client id:1 in client:1,trace is:50-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.38763734698295593-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:16,958 - client1 - INFO - loss :0.37236902117729187
-2024-12-02 11:04:17,217 - client1 - INFO - client id:1 in client:1,trace is:51-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.37236902117729187-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:17,400 - client1 - INFO - loss :0.49375537037849426
-2024-12-02 11:04:17,680 - client1 - INFO - client id:1 in client:1,trace is:52-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.49375537037849426-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:17,908 - client1 - INFO - loss :0.2885870337486267
-2024-12-02 11:04:18,236 - client1 - INFO - client id:1 in client:1,trace is:53-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.2885870337486267-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:18,433 - client1 - INFO - loss :0.45219650864601135
-2024-12-02 11:04:18,700 - client1 - INFO - client id:1 in client:1,trace is:54-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.45219650864601135-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:18,932 - client1 - INFO - loss :0.5574774146080017
-2024-12-02 11:04:19,275 - client1 - INFO - client id:1 in client:1,trace is:55-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.5574774146080017-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:19,445 - client1 - INFO - loss :0.44516444206237793
-2024-12-02 11:04:19,714 - client1 - INFO - client id:1 in client:1,trace is:56-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.44516444206237793-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:19,904 - client1 - INFO - loss :0.36310169100761414
-2024-12-02 11:04:20,149 - client1 - INFO - client id:1 in client:1,trace is:57-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.36310169100761414-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:20,445 - client1 - INFO - loss :0.505222737789154
-2024-12-02 11:04:20,675 - client1 - INFO - client id:1 in client:1,trace is:58-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.505222737789154-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:20,863 - client1 - INFO - loss :0.4416211247444153
-2024-12-02 11:04:21,117 - client1 - INFO - client id:1 in client:1,trace is:59-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.4416211247444153-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:21,307 - client1 - INFO - loss :0.5333923101425171
-2024-12-02 11:04:21,619 - client1 - INFO - client id:1 in client:1,trace is:60-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.5333923101425171-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:21,822 - client1 - INFO - loss :0.3162156343460083
-2024-12-02 11:04:22,111 - client1 - INFO - client id:1 in client:1,trace is:61-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.3162156343460083-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:22,310 - client1 - INFO - loss :0.28103283047676086
-2024-12-02 11:04:22,578 - client1 - INFO - client id:1 in client:1,trace is:62-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.28103283047676086-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:22,761 - client1 - INFO - loss :0.23413237929344177
-2024-12-02 11:04:22,975 - client1 - INFO - client id:1 in client:1,trace is:63-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.23413237929344177-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:23,158 - client1 - INFO - loss :0.281708300113678
-2024-12-02 11:04:23,412 - client1 - INFO - client id:1 in client:1,trace is:64-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.281708300113678-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:23,575 - client1 - INFO - loss :0.3056268095970154
-2024-12-02 11:04:23,830 - client1 - INFO - client id:1 in client:1,trace is:65-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.3056268095970154-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:24,090 - client1 - INFO - loss :0.2646367847919464
-2024-12-02 11:04:24,313 - client1 - INFO - client id:1 in client:1,trace is:66-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.2646367847919464-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:24,527 - client1 - INFO - loss :0.25568887591362
-2024-12-02 11:04:24,751 - client1 - INFO - client id:1 in client:1,trace is:67-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.25568887591362-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:24,923 - client1 - INFO - loss :0.4233792722225189
-2024-12-02 11:04:25,157 - client1 - INFO - client id:1 in client:1,trace is:68-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.4233792722225189-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
-2024-12-02 11:04:25,413 - client1 - INFO - loss :0.4260173439979553
-2024-12-02 11:04:25,683 - client1 - INFO - client id:1 in client:1,trace is:69-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.4260173439979553-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:18,705 - client1 - INFO - loss :2.307760238647461
+2024-12-03 20:28:18,798 - client1 - INFO - client id:1 in client:1,trace is:1-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.307760238647461-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:18,919 - client1 - INFO - loss :2.291931629180908
+2024-12-03 20:28:19,162 - client1 - INFO - client id:1 in client:1,trace is:2-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.291931629180908-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:19,451 - client1 - INFO - loss :2.274864673614502
+2024-12-03 20:28:19,833 - client1 - INFO - client id:1 in client:1,trace is:3-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.274864673614502-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:20,003 - client1 - INFO - loss :2.2425739765167236
+2024-12-03 20:28:20,201 - client1 - INFO - client id:1 in client:1,trace is:4-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.2425739765167236-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:20,360 - client1 - INFO - loss :2.1958274841308594
+2024-12-03 20:28:20,556 - client1 - INFO - client id:1 in client:1,trace is:5-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.1958274841308594-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:20,717 - client1 - INFO - loss :2.1951637268066406
+2024-12-03 20:28:20,910 - client1 - INFO - client id:1 in client:1,trace is:6-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.1951637268066406-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:21,070 - client1 - INFO - loss :2.1758341789245605
+2024-12-03 20:28:21,267 - client1 - INFO - client id:1 in client:1,trace is:7-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.1758341789245605-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:21,437 - client1 - INFO - loss :2.1283321380615234
+2024-12-03 20:28:21,633 - client1 - INFO - client id:1 in client:1,trace is:8-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.1283321380615234-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:21,785 - client1 - INFO - loss :2.1241962909698486
+2024-12-03 20:28:21,980 - client1 - INFO - client id:1 in client:1,trace is:9-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.1241962909698486-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:22,143 - client1 - INFO - loss :2.105652332305908
+2024-12-03 20:28:22,339 - client1 - INFO - client id:1 in client:1,trace is:10-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.105652332305908-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:22,506 - client1 - INFO - loss :2.00215220451355
+2024-12-03 20:28:22,720 - client1 - INFO - client id:1 in client:1,trace is:11-forward1_2--forward2_3--forward3_4--forward4_5--loss:$2.00215220451355-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:22,867 - client1 - INFO - loss :1.9842112064361572
+2024-12-03 20:28:23,146 - client1 - INFO - client id:1 in client:1,trace is:12-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.9842112064361572-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:23,318 - client1 - INFO - loss :1.886710524559021
+2024-12-03 20:28:23,510 - client1 - INFO - client id:1 in client:1,trace is:13-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.886710524559021-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:23,674 - client1 - INFO - loss :1.8644165992736816
+2024-12-03 20:28:23,868 - client1 - INFO - client id:1 in client:1,trace is:14-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.8644165992736816-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:24,033 - client1 - INFO - loss :1.8590314388275146
+2024-12-03 20:28:24,236 - client1 - INFO - client id:1 in client:1,trace is:15-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.8590314388275146-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:24,413 - client1 - INFO - loss :1.758874535560608
+2024-12-03 20:28:24,624 - client1 - INFO - client id:1 in client:1,trace is:16-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.758874535560608-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:24,789 - client1 - INFO - loss :1.682716727256775
+2024-12-03 20:28:24,987 - client1 - INFO - client id:1 in client:1,trace is:17-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.682716727256775-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:25,160 - client1 - INFO - loss :1.5983476638793945
+2024-12-03 20:28:25,356 - client1 - INFO - client id:1 in client:1,trace is:18-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.5983476638793945-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:25,525 - client1 - INFO - loss :1.5838817358016968
+2024-12-03 20:28:25,745 - client1 - INFO - client id:1 in client:1,trace is:19-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.5838817358016968-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:26,174 - client1 - INFO - loss :1.3771981000900269
+2024-12-03 20:28:26,433 - client1 - INFO - client id:1 in client:1,trace is:20-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.3771981000900269-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:26,627 - client1 - INFO - loss :1.3770751953125
+2024-12-03 20:28:26,874 - client1 - INFO - client id:1 in client:1,trace is:21-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.3770751953125-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:27,056 - client1 - INFO - loss :1.2574939727783203
+2024-12-03 20:28:27,261 - client1 - INFO - client id:1 in client:1,trace is:22-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.2574939727783203-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:27,434 - client1 - INFO - loss :1.1346232891082764
+2024-12-03 20:28:27,636 - client1 - INFO - client id:1 in client:1,trace is:23-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.1346232891082764-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:27,800 - client1 - INFO - loss :1.0286121368408203
+2024-12-03 20:28:28,044 - client1 - INFO - client id:1 in client:1,trace is:24-forward1_2--forward2_3--forward3_4--forward4_5--loss:$1.0286121368408203-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:28,223 - client1 - INFO - loss :0.9658132195472717
+2024-12-03 20:28:28,439 - client1 - INFO - client id:1 in client:1,trace is:25-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.9658132195472717-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:28,624 - client1 - INFO - loss :0.9247556328773499
+2024-12-03 20:28:28,846 - client1 - INFO - client id:1 in client:1,trace is:26-forward1_2--forward2_3--forward3_4--forward4_5--loss:$0.9247556328773499-backward5_4-backward4_3--backward3_2--backward2_1--backward1_0-
+2024-12-03 20:28:28,999 - client1 - INFO - loss :0.8501323461532593

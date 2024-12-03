@@ -1,0 +1,3 @@
+dfl @ git+https://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@github.com/agcom/dfl.git@aee24f5b4b589c60199257ef5e41beaa69e0fb80
+torchvision~=0.19.1
+torch~=2.4.1
