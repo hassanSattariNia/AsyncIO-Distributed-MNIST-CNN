@@ -2,3 +2,5 @@
 /data 
 /distributed_code/__pycache__/
 /data
+requirements.txt
+/logs
